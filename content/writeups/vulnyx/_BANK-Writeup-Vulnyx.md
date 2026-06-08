@@ -1,6 +1,6 @@
 ---
 title: "BANK Writeup - VulNyx"
-date: "30.05.2026"
+date: "30-05-2026"
 description: "Vulnyx machine writeups and walkthroughs."
 summary: ""
 platform: "vulnyx"
