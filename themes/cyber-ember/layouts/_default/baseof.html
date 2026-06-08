@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}" data-theme="dark">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="min-h-screen flex flex-col">
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  {{ partial "header.html" . }}
+  <main id="main-content" class="flex-1">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  {{ partial "scripts.html" . }}
+</body>
+</html>

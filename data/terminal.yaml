@@ -1,0 +1,89 @@
+prompt: "rithesh@cyber-ember:~$"
+banner: |
+  Cyber Ember Terminal v1.0
+  Type 'help' for available commands.
+
+commands:
+  help:
+    output: |
+      Available commands:
+        whoami     — Display identity
+        skills     — List technical skills
+        projects   — Show projects
+        certifications — List certifications
+        contact    — Contact information
+        clear      — Clear terminal
+        help       — Show this message
+
+  whoami:
+    output: |
+      Name:       Rithesh Chandra Alakati
+      Role:       Cybersecurity Student | Penetration Tester | Aspiring Red Teamer
+      Focus:      Offensive Security, CTFs, Tool Development
+      GitHub:     zer0arc4
+      Status:     Always learning, always hacking (ethically).
+
+  skills:
+    output: |
+      [Operating Systems]
+        Linux ████████░░ 75%    Windows ██████░░░░ 65%
+
+      [Networking]
+        TCP/IP ███████░░░ 72%   Nmap ████████░░ 78%
+
+      [Programming]
+        Python ████████░░ 75%   Bash ███████░░░ 70%
+
+      [Security Tools]
+        Burp Suite ███████░░░ 70%   Metasploit ██████░░░░ 68%
+        Wireshark ███████░░░ 72%   Caido ██████░░░░ 65%
+
+      [Domains]
+        Web Security ███████░░░ 72%   API Security ███████░░░ 70%
+
+  projects:
+    output: |
+      [1] Cryptographic Hash Generator
+          Python tool for generating cryptographic hashes
+          → /projects/cryptographic-hash-generator/
+
+      [2] Student Database System
+          Full-stack database management application
+          → /projects/student-database-system/
+
+      [3] Future Security Tools
+          Upcoming offensive security tooling projects
+          → /projects/future-security-tools/
+
+  certifications:
+    output: |
+      Completed Certifications:
+        ✓ Cisco Introduction to Cybersecurity
+        ✓ Cisco Operating Systems Basics
+        ✓ Postman API Fundamentals Student Expert
+        ✓ Tata Cybersecurity Analyst (Forage)
+        ✓ TryHackMe Pre Security
+        ✓ TryHackMe Security Principles
+        ✓ TryHackMe Pentesting Fundamentals
+        ✓ HTB Academy Linux Fundamentals
+        ✓ HTB Academy Introduction to Networking
+        ✓ HTB Academy Web Requests
+
+  contact:
+    output: |
+      Email:    alakatiritheshchandra04@gmail.com
+      GitHub:   https://github.com/zer0arc4
+      LinkedIn: https://linkedin.com/in/alakati-rithesh-chandra
+      Resume:   /resume/
+
+  clear:
+    output: ""
+    action: "clear"
+
+  ls:
+    output: |
+      about/  blog/  certifications/  contact/  notes/
+      projects/  research/  resume/  writeups/
+
+  pwd:
+    output: "/home/rithesh/cyber-ember"

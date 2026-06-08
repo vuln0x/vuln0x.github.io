@@ -1,0 +1,34 @@
+{{- $terminal := .Site.Data.terminal -}}
+{{- $commandsJSON := dict -}}
+{{- range $key, $val := $terminal.commands -}}
+  {{- $commandsJSON = merge $commandsJSON (dict $key (dict "output" $val.output "action" ($val.action | default ""))) -}}
+{{- end -}}
+
+<section class="py-16 bg-ember-bg-secondary">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="section-title">Interactive Terminal</h2>
+    <p class="section-subtitle">Try typing commands — start with <code class="text-ember-soft font-mono">help</code></p>
+
+    <div
+      id="interactive-terminal"
+      class="terminal-window max-w-3xl mx-auto"
+      data-prompt="{{ $terminal.prompt }}"
+      data-banner="{{ $terminal.banner }}"
+      data-commands="{{ $commandsJSON | jsonify }}"
+    >
+      <div class="terminal-header">
+        <span class="terminal-dot bg-red-500"></span>
+        <span class="terminal-dot bg-yellow-500"></span>
+        <span class="terminal-dot bg-green-500"></span>
+        <span class="ml-2 text-text-muted text-xs">cyber-ember — bash</span>
+      </div>
+      <div class="terminal-body">
+        <div class="terminal-output"></div>
+        <div class="terminal-input-line">
+          <span class="terminal-prompt">{{ $terminal.prompt }}</span>
+          <input type="text" class="terminal-input" aria-label="Terminal input" autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

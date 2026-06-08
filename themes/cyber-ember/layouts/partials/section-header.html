@@ -1,0 +1,10 @@
+<div class="mb-10">
+  {{ partial "breadcrumbs.html" . }}
+  <h1 class="text-4xl font-bold text-text-primary mb-3">{{ .Title }}</h1>
+  {{ with .Description }}
+  <p class="text-text-secondary text-lg max-w-3xl">{{ . }}</p>
+  {{ end }}
+  {{ with .Content }}
+  <div class="prose-ember mt-4 max-w-3xl">{{ . }}</div>
+  {{ end }}
+</div>

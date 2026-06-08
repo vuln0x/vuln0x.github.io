@@ -1,0 +1,79 @@
+[[main]]
+  name = 'Home'
+  url = '/'
+  weight = 10
+
+[[main]]
+  name = 'Writeups'
+  url = '/writeups/'
+  weight = 20
+
+[[main]]
+  name = 'Projects'
+  url = '/projects/'
+  weight = 30
+
+[[main]]
+  name = 'Blog'
+  url = '/blog/'
+  weight = 40
+
+[[main]]
+  name = 'Notes'
+  url = '/notes/'
+  weight = 50
+
+[[main]]
+  name = 'Certifications'
+  url = '/certifications/'
+  weight = 60
+
+[[main]]
+  name = 'About'
+  url = '/about/'
+  weight = 70
+
+[[main]]
+  name = 'Contact'
+  url = '/contact/'
+  weight = 80
+
+[[footer]]
+  name = 'Writeups'
+  url = '/writeups/'
+  weight = 10
+
+[[footer]]
+  name = 'Projects'
+  url = '/projects/'
+  weight = 20
+
+[[footer]]
+  name = 'Blog'
+  url = '/blog/'
+  weight = 30
+
+[[footer]]
+  name = 'Notes'
+  url = '/notes/'
+  weight = 40
+
+[[footer]]
+  name = 'Research'
+  url = '/research/'
+  weight = 50
+
+[[footer]]
+  name = 'About'
+  url = '/about/'
+  weight = 60
+
+[[footer]]
+  name = 'Resume'
+  url = '/resume/'
+  weight = 70
+
+[[footer]]
+  name = 'Contact'
+  url = '/contact/'
+  weight = 80

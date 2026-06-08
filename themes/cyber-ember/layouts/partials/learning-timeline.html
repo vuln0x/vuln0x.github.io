@@ -1,0 +1,25 @@
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="section-title">Learning Timeline</h2>
+    <p class="section-subtitle">Key milestones in my cybersecurity journey</p>
+
+    <div class="relative max-w-3xl mx-auto">
+      <div class="timeline-line"></div>
+      <div class="space-y-8">
+        {{ range .Site.Data.timeline.events }}
+        <div class="relative pl-12">
+          <div class="timeline-dot top-1"></div>
+          <div class="ember-card p-5">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="badge badge-platform">{{ .type }}</span>
+              <time class="text-text-muted text-sm font-mono">{{ .date }}</time>
+            </div>
+            <h3 class="text-text-primary font-semibold">{{ .title }}</h3>
+            <p class="text-text-muted text-sm mt-1">{{ .description }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

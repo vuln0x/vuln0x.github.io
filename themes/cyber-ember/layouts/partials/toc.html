@@ -1,0 +1,10 @@
+{{- if and .TableOfContents (gt (len .TableOfContents) 32) -}}
+<aside class="hidden xl:block sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto">
+  <nav aria-label="Table of contents" class="ember-card p-5">
+    <h2 class="text-text-primary font-semibold text-sm mb-4 uppercase tracking-wider">On This Page</h2>
+    <div class="toc text-sm text-text-muted space-y-1 [&_a]:hover:text-ember-primary [&_a]:transition-colors [&_ul]:ml-4 [&_ul]:mt-1">
+      {{ .TableOfContents }}
+    </div>
+  </nav>
+</aside>
+{{- end -}}

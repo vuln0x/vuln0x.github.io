@@ -1,0 +1,23 @@
+{{- if not .IsHome -}}
+<nav aria-label="Breadcrumb" class="mb-6">
+  <ol class="flex flex-wrap items-center gap-2 text-sm text-text-muted">
+    <li>
+      <a href="{{ "/" | relURL }}" class="hover:text-ember-primary transition-colors">Home</a>
+    </li>
+    {{- range .Ancestors.Reverse -}}
+    {{- if not .IsHome -}}
+    <li class="flex items-center gap-2">
+      <span>/</span>
+      <a href="{{ .RelPermalink }}" class="hover:text-ember-primary transition-colors">{{ .Title }}</a>
+    </li>
+    {{- end -}}
+    {{- end -}}
+    {{- if .Title -}}
+    <li class="flex items-center gap-2">
+      <span>/</span>
+      <span class="text-text-primary">{{ .Title }}</span>
+    </li>
+    {{- end -}}
+  </ol>
+</nav>
+{{- end -}}

@@ -1,0 +1,11 @@
+{{- $related := .Site.RegularPages.Related . | first 4 -}}
+{{- if gt (len $related) 0 -}}
+<section class="mt-12">
+  <h2 class="text-2xl font-bold text-text-primary mb-6">Related Posts</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    {{- range $related -}}
+    {{- partial "article-card.html" . -}}
+    {{- end -}}
+  </div>
+</section>
+{{- end -}}

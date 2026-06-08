@@ -1,0 +1,56 @@
+baseURL = 'https://zer0arc4.github.io/'
+languageCode = 'en-us'
+title = 'Rithesh Chandra Alakati'
+theme = 'cyber-ember'
+
+enableRobotsTXT = true
+enableGitInfo = true
+enableEmoji = true
+
+[pagination]
+  pagerSize = 12
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
+  skill = 'skills'
+  platform = 'platforms'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    style = 'monokai'
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+
+[sitemap]
+  changefreq = 'weekly'
+  priority = 0.5
+
+[related]
+  threshold = 20
+  includeNewer = true
+  toLower = true
+  [[related.indices]]
+    name = 'tags'
+    weight = 100
+  [[related.indices]]
+    name = 'skills'
+    weight = 80
+  [[related.indices]]
+    name = 'categories'
+    weight = 60
+
+[permalinks]
+  writeups = '/writeups/:sections[1:]/:slug/'
+  notes = '/notes/:sections[1:]/:slug/'

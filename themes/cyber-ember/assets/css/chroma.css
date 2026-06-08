@@ -1,0 +1,18 @@
+/* Cyber Ember syntax highlighting — orange-tinted monokai */
+.highlight {
+  @apply rounded-lg overflow-x-auto my-6;
+  background-color: var(--color-bg-secondary) !important;
+  border: 1px solid var(--color-border);
+}
+
+.highlight pre {
+  @apply p-4 m-0 text-sm font-mono leading-relaxed;
+}
+
+.chroma .k, .chroma .kd, .chroma .kn, .chroma .kp, .chroma .kr { color: #FF6B00; }
+.chroma .s, .chroma .sa, .chroma .sb, .chroma .sc, .chroma .dl, .chroma .sd, .chroma .s2, .chroma .sh, .chroma .si, .chroma .sx, .chroma .sr, .chroma .s1 { color: #A5D6FF; }
+.chroma .nt, .chroma .na { color: #FFA726; }
+.chroma .nf, .chroma .fm { color: #FFB74D; }
+.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1, .chroma .cs { color: #6B7280; font-style: italic; }
+.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi, .chroma .mo { color: #FF8C00; }
+.chroma .o, .chroma .ow { color: #FF6B00; }

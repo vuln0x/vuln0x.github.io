@@ -1,0 +1,93 @@
+# Cyber Ember Theme Parameters
+
+description = 'Documenting my journey through cybersecurity, penetration testing, CTFs, research, and tool development.'
+author = 'Rithesh Chandra Alakati'
+tagline = 'Documenting my journey through cybersecurity, penetration testing, CTFs, research, and tool development.'
+
+# Branding
+[brand]
+  name = 'Rithesh Chandra Alakati'
+  title = 'Cybersecurity Student | Penetration Tester | Aspiring Red Teamer'
+  initials = 'RCA'
+
+# Social
+[social]
+  github = 'https://github.com/zer0arc4'
+  linkedin = 'https://linkedin.com/in/alakati-rithesh-chandra'
+  email = 'alakatiritheshchandra04@gmail.com'
+
+# Resume
+[resume]
+  file = '/files/resume.pdf'
+  view = true
+  download = true
+
+# Analytics — Plausible (privacy-friendly)
+[analytics]
+  enabled = true
+  provider = 'plausible'
+  domain = 'zer0arc4.github.io'
+
+# Comments — Giscus
+[comments]
+  enabled = true
+  provider = 'giscus'
+  repo = 'zer0arc4/zer0arc4.github.io'
+  repoId = ''
+  category = 'Comments'
+  categoryId = ''
+  mapping = 'pathname'
+  theme = 'noborder_dark'
+  lang = 'en'
+  reactions = true
+  writeups_default = false
+  blog_default = true
+  notes_default = true
+
+# Search — Pagefind
+[search]
+  enabled = true
+  provider = 'pagefind'
+
+# SEO
+[seo]
+  twitter_card = 'summary_large_image'
+  og_image = '/images/og/default.svg'
+  google_site_verification = ''
+
+# Features
+[features]
+  terminal = true
+  stats = true
+  skills_matrix = true
+  timeline = true
+  reading_time = true
+  related_posts = true
+  author_box = true
+  breadcrumbs = true
+  dark_mode = true
+  newsletter = false
+
+# Homepage section order
+[homepage]
+  sections = [
+    'hero',
+    'featured_writeups',
+    'featured_projects',
+    'latest_articles',
+    'skills_matrix',
+    'certifications',
+    'timeline',
+    'stats',
+    'contact_cta',
+  ]
+
+# Difficulty colors
+[difficulty]
+  easy = '#22C55E'
+  medium = '#FF8C00'
+  hard = '#EF4444'
+  insane = '#A855F7'
+  beginner = '#22C55E'
+  intermediate = '#FF8C00'
+  advanced = '#EF4444'

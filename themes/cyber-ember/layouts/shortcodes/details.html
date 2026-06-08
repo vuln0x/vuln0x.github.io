@@ -1,0 +1,5 @@
+{{- $summary := .Get "summary" | default "Details" -}}
+<details class="ember-card p-4 my-4 group">
+  <summary class="text-text-primary font-semibold cursor-pointer hover:text-ember-primary transition-colors">{{ $summary }}</summary>
+  <div class="prose-ember mt-4 text-sm">{{ .Inner | markdownify }}</div>
+</details>

@@ -1,0 +1,18 @@
+<div class="ember-card p-5 flex flex-col h-full">
+  <div class="flex items-start justify-between mb-3">
+    <h3 class="text-text-primary font-semibold text-sm leading-snug">{{ .name }}</h3>
+    <span class="badge badge-easy text-xs shrink-0 ml-2">{{ .status }}</span>
+  </div>
+  <p class="text-ember-soft text-sm font-medium mb-2">{{ .issuer }}</p>
+  <time class="text-text-muted text-xs font-mono mb-3">{{ .date }}</time>
+  {{ if .skills }}
+  <div class="flex flex-wrap gap-1.5 mt-auto">
+    {{ range first 3 .skills }}
+    <span class="badge bg-ember-card text-text-muted text-xs">{{ . }}</span>
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ if .credential_url }}
+  <a href="{{ .credential_url }}" target="_blank" rel="noopener noreferrer" class="text-ember-primary text-xs mt-3 hover:underline">Verify Credential →</a>
+  {{ end }}
+</div>

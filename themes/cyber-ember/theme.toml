@@ -1,0 +1,12 @@
+name = 'Cyber Ember'
+license = 'MIT'
+licenselink = 'https://github.com/zer0arc4/zer0arc4.github.io/blob/main/LICENSE'
+description = 'A premium dark-first cybersecurity portfolio theme for Hugo'
+homepage = 'https://zer0arc4.github.io/'
+tags = ['portfolio', 'blog', 'dark', 'cybersecurity', 'tailwind']
+features = ['search', 'comments', 'terminal', 'stats', 'skills-matrix']
+min_version = '0.120.0'
+
+[author]
+  name = 'Rithesh Chandra Alakati'
+  homepage = 'https://zer0arc4.github.io/'

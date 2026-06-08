@@ -1,0 +1,27 @@
+{{ $theme := resources.Get "js/theme.js" }}
+{{ $nav := resources.Get "js/nav.js" }}
+{{ $stats := resources.Get "js/stats.js" }}
+{{ $search := resources.Get "js/search.js" }}
+
+{{ $js := slice $theme $nav $stats }}
+{{ if .Site.Params.search.enabled }}
+  {{ $js = $js | append $search }}
+{{ end }}
+
+{{ if and .IsHome .Site.Params.features.terminal }}
+  {{ $terminal := resources.Get "js/terminal.js" }}
+  {{ $js = $js | append $terminal }}
+{{ end }}
+
+{{ $bundle := $js | resources.Concat "js/bundle.js" }}
+{{ if hugo.IsProduction }}
+  {{ $bundle = $bundle | minify | fingerprint }}
+{{ end }}
+<script src="{{ $bundle.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $bundle.Data.Integrity }}"{{ end }} defer></script>
+
+{{ if or (in .Content "mermaid") (in .Content "language-mermaid") }}
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'dark', themeVariables: { primaryColor: '#FF6B00', primaryTextColor: '#fff', lineColor: '#FF8C00' } });
+</script>
+{{ end }}

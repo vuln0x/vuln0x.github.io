@@ -1,0 +1,81 @@
+categories:
+  - name: "Operating Systems"
+    skills:
+      - name: "Linux"
+        level: 75
+        icon: "linux"
+      - name: "Windows"
+        level: 65
+        icon: "windows"
+
+  - name: "Networking"
+    skills:
+      - name: "Networking"
+        level: 70
+        icon: "network"
+      - name: "TCP/IP"
+        level: 72
+        icon: "tcp"
+      - name: "OSI Model"
+        level: 80
+        icon: "osi"
+      - name: "Subnetting"
+        level: 68
+        icon: "subnet"
+
+  - name: "Programming"
+    skills:
+      - name: "Python"
+        level: 75
+        icon: "python"
+      - name: "Java"
+        level: 60
+        icon: "java"
+      - name: "C"
+        level: 55
+        icon: "c"
+      - name: "Bash"
+        level: 70
+        icon: "bash"
+
+  - name: "Security Tools"
+    skills:
+      - name: "Nmap"
+        level: 78
+        icon: "nmap"
+      - name: "Wireshark"
+        level: 72
+        icon: "wireshark"
+      - name: "Burp Suite"
+        level: 70
+        icon: "burp"
+      - name: "Caido"
+        level: 65
+        icon: "caido"
+      - name: "Metasploit"
+        level: 68
+        icon: "metasploit"
+      - name: "Postman"
+        level: 75
+        icon: "postman"
+
+  - name: "Security Domains"
+    skills:
+      - name: "Web Security"
+        level: 72
+        icon: "web"
+      - name: "API Security"
+        level: 70
+        icon: "api"
+
+  - name: "DevOps & Tools"
+    skills:
+      - name: "VirtualBox"
+        level: 80
+        icon: "vm"
+      - name: "Git"
+        level: 75
+        icon: "git"
+      - name: "GitHub"
+        level: 80
+        icon: "github"

@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  {{ partial "section-header.html" . }}
+
+  <!-- Platform Filter -->
+  <div class="flex flex-wrap gap-3 mb-10">
+    <a href="{{ "/writeups/" | relURL }}" class="badge badge-platform px-4 py-2 {{ if eq .Section "writeups" }}bg-ember-primary/30{{ end }}">All</a>
+    {{ range .Sections }}
+    <a href="{{ .RelPermalink }}" class="badge badge-platform px-4 py-2 hover:bg-ember-primary/20 transition-colors">
+      {{ .Title }} ({{ len .RegularPages }})
+    </a>
+    {{ end }}
+  </div>
+
+  {{ if .IsSection }}
+    {{ if gt (len .RegularPages) 0 }}
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {{ range .RegularPages }}
+        {{ partial "writeup-card.html" . }}
+      {{ end }}
+    </div>
+    {{ else if gt (len .Sections) 0 }}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {{ range .Sections }}
+      <a href="{{ .RelPermalink }}" class="ember-card p-6 text-center group">
+        <h3 class="text-text-primary font-semibold text-lg group-hover:text-ember-primary transition-colors">{{ .Title }}</h3>
+        <p class="text-text-muted text-sm mt-2">{{ len .RegularPages }} writeups</p>
+      </a>
+      {{ end }}
+    </div>
+    {{ else }}
+    <p class="text-text-muted">No writeups published yet.</p>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}

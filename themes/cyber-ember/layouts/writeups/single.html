@@ -1,0 +1,50 @@
+{{ define "main" }}
+<article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" data-pagefind-body>
+  <div class="grid grid-cols-1 xl:grid-cols-[1fr_250px] gap-8">
+    <div class="max-w-4xl">
+      {{ partial "breadcrumbs.html" . }}
+
+      <header class="mb-8">
+        <div class="flex flex-wrap items-center gap-2 mb-4">
+          {{ with .Params.platform }}
+          <span class="badge badge-platform">{{ . }}</span>
+          {{ end }}
+          {{ with .Params.difficulty }}
+          <span class="badge badge-{{ . }}">{{ . }}</span>
+          {{ end }}
+          {{ with .Params.os }}
+          <span class="badge bg-ember-bg-secondary text-text-muted">{{ . }}</span>
+          {{ end }}
+          {{ with .Params.status }}
+          <span class="badge bg-ember-bg-secondary text-text-muted">{{ . }}</span>
+          {{ end }}
+        </div>
+        <h1 class="text-4xl font-bold text-text-primary mb-4">{{ .Title }}</h1>
+        <div class="flex flex-wrap items-center gap-4 text-sm text-text-muted">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          <span>{{ .ReadingTime }} min read</span>
+          {{ with .Params.points }}
+          <span>{{ . }} points</span>
+          {{ end }}
+        </div>
+        {{ with .Params.tags }}
+        <div class="flex flex-wrap gap-2 mt-4">
+          {{ range . }}
+          <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="badge bg-ember-bg-secondary text-text-muted hover:text-ember-primary transition-colors">#{{ . }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </header>
+
+      <div class="prose-ember">
+        {{ .Content }}
+      </div>
+
+      {{ partial "author-box.html" . }}
+      {{ partial "related-posts.html" . }}
+      {{ partial "giscus.html" . }}
+    </div>
+    {{ partial "toc.html" . }}
+  </div>
+</article>
+{{ end }}

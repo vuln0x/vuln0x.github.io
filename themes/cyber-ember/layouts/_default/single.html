@@ -1,0 +1,43 @@
+{{ define "main" }}
+<article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" data-pagefind-body>
+  <div class="grid grid-cols-1 xl:grid-cols-[1fr_250px] gap-8">
+    <div class="max-w-4xl">
+      {{ partial "breadcrumbs.html" . }}
+
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold text-text-primary mb-4">{{ .Title }}</h1>
+        <div class="flex flex-wrap items-center gap-4 text-sm text-text-muted">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          <span>{{ .ReadingTime }} min read</span>
+          {{ with .Params.categories }}
+          <span class="badge badge-platform">{{ index . 0 }}</span>
+          {{ end }}
+        </div>
+        {{ with .Params.tags }}
+        <div class="flex flex-wrap gap-2 mt-4">
+          {{ range . }}
+          <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="badge bg-ember-bg-secondary text-text-muted hover:text-ember-primary transition-colors">#{{ . }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+      </header>
+
+      <div class="prose-ember">
+        {{ .Content }}
+      </div>
+
+      {{ if .Site.Params.features.author_box }}
+        {{ partial "author-box.html" . }}
+      {{ end }}
+
+      {{ if .Site.Params.features.related_posts }}
+        {{ partial "related-posts.html" . }}
+      {{ end }}
+
+      {{ partial "giscus.html" . }}
+    </div>
+
+    {{ partial "toc.html" . }}
+  </div>
+</article>
+{{ end }}

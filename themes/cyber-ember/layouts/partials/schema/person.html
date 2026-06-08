@@ -1,0 +1,16 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ .Site.Data.site.name }}",
+  "jobTitle": "{{ .Site.Data.site.title }}",
+  "url": "{{ .Site.BaseURL }}",
+  "email": "{{ .Site.Data.site.email }}",
+  "image": "{{ .Site.Data.site.profile_image | absURL }}",
+  "sameAs": [
+    "{{ .Site.Params.social.github }}",
+    "{{ .Site.Params.social.linkedin }}"
+  ],
+  "knowsAbout": ["Cybersecurity", "Penetration Testing", "Red Teaming", "CTF"]
+}
+</script>

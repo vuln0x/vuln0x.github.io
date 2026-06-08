@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-primary: #0B0F19;
+    --color-bg-secondary: #111827;
+    --color-bg-card: #1F2937;
+    --color-bg-glass: rgba(31, 41, 55, 0.6);
+    --color-accent-primary: #FF6B00;
+    --color-accent-secondary: #FF8C00;
+    --color-accent-highlight: #FFA726;
+    --color-accent-soft: #FFB74D;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #CBD5E1;
+    --color-text-muted: #94A3B8;
+    --color-border: #374151;
+    --color-danger: #EF4444;
+    --glow-accent: 0 0 20px rgba(255, 107, 0, 0.3);
+    --glow-subtle: 0 0 40px rgba(255, 107, 0, 0.1);
+  }
+
+  [data-theme="light"] {
+    --color-bg-primary: #F8FAFC;
+    --color-bg-secondary: #F1F5F9;
+    --color-bg-card: #FFFFFF;
+    --color-bg-glass: rgba(255, 255, 255, 0.8);
+    --color-text-primary: #0F172A;
+    --color-text-secondary: #475569;
+    --color-text-muted: #64748B;
+    --color-border: #E2E8F0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    @apply bg-ember-bg text-text-secondary font-sans antialiased;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-secondary);
+  }
+
+  ::selection {
+    @apply bg-ember-primary/30 text-text-primary;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-ember-primary;
+  }
+}
+
+@layer components {
+  .glass-card {
+    background: var(--color-bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+    @apply rounded-xl;
+  }
+
+  .ember-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    @apply rounded-xl transition-all duration-300;
+  }
+
+  .ember-card:hover {
+    border-color: rgba(255, 107, 0, 0.4);
+    box-shadow: var(--glow-subtle);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium text-white transition-all duration-300;
+    background: linear-gradient(135deg, #FF6B00, #FF8C00);
+    background-size: 200% 200%;
+  }
+
+  .btn-primary:hover {
+    box-shadow: var(--glow-accent);
+    background-position: 100% 0;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium transition-all duration-300;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+  }
+
+  .btn-ghost:hover {
+    border-color: var(--color-accent-primary);
+    color: var(--color-accent-primary);
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-text-primary mb-2;
+  }
+
+  .section-subtitle {
+    @apply text-text-muted text-lg mb-8;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-easy { @apply bg-green-500/20 text-green-400; }
+  .badge-medium { @apply bg-ember-secondary/20 text-ember-secondary; }
+  .badge-hard { @apply bg-red-500/20 text-red-400; }
+  .badge-insane { @apply bg-purple-500/20 text-purple-400; }
+  .badge-platform { @apply bg-ember-primary/20 text-ember-soft; }
+
+  .prose-ember {
+    @apply prose prose-invert prose-ember max-w-none;
+    --tw-prose-body: var(--color-text-secondary);
+    --tw-prose-headings: var(--color-text-primary);
+    --tw-prose-links: var(--color-accent-primary);
+    --tw-prose-bold: var(--color-text-primary);
+    --tw-prose-code: var(--color-accent-soft);
+    --tw-prose-pre-bg: var(--color-bg-secondary);
+  }
+
+  [data-theme="light"] .prose-ember {
+    @apply prose-slate;
+  }
+
+  .skill-bar-track {
+    @apply h-2 rounded-full overflow-hidden;
+    background-color: var(--color-bg-secondary);
+  }
+
+  .skill-bar-fill {
+    @apply h-full rounded-full transition-all duration-1000 ease-out;
+    background: linear-gradient(90deg, #FF6B00, #FF8C00);
+  }
+
+  .terminal-window {
+    @apply rounded-xl overflow-hidden font-mono text-sm;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+  }
+
+  .terminal-header {
+    @apply flex items-center gap-2 px-4 py-3;
+    background-color: var(--color-bg-card);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .terminal-dot {
+    @apply w-3 h-3 rounded-full;
+  }
+
+  .terminal-body {
+    @apply p-4 min-h-[200px] max-h-[400px] overflow-y-auto;
+  }
+
+  .terminal-input-line {
+    @apply flex items-center gap-2 mt-2;
+  }
+
+  .terminal-prompt {
+    @apply text-ember-primary whitespace-nowrap;
+  }
+
+  .terminal-input {
+    @apply flex-1 bg-transparent border-none outline-none text-text-primary font-mono caret-ember-primary;
+  }
+
+  .stat-counter {
+    @apply text-4xl md:text-5xl font-bold;
+    background: linear-gradient(135deg, #FF6B00, #FFA726);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .timeline-line {
+    @apply absolute left-4 top-0 bottom-0 w-0.5;
+    background: linear-gradient(180deg, #FF6B00, #FF8C00, transparent);
+  }
+
+  .timeline-dot {
+    @apply absolute left-2.5 w-3 h-3 rounded-full border-2;
+    border-color: var(--color-accent-primary);
+    background-color: var(--color-bg-primary);
+  }
+
+  .nav-link {
+    @apply text-text-secondary hover:text-ember-primary transition-colors duration-200 text-sm font-medium;
+  }
+
+  .nav-link-active {
+    @apply text-ember-primary;
+  }
+
+  .search-overlay {
+    @apply fixed inset-0 z-50 flex items-start justify-center pt-[10vh] px-4;
+    background: rgba(11, 15, 25, 0.85);
+    backdrop-filter: blur(8px);
+  }
+
+  .admonition {
+    @apply rounded-lg p-4 my-6 border-l-4;
+  }
+
+  .admonition-note { @apply border-blue-500 bg-blue-500/10; }
+  .admonition-tip { @apply border-green-500 bg-green-500/10; }
+  .admonition-warning { @apply border-ember-secondary bg-ember-secondary/10; }
+  .admonition-danger { @apply border-red-500 bg-red-500/10; }
+
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-ember-primary focus:text-white focus:rounded-lg;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #FF6B00, #FFA726);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-border {
+    box-shadow: var(--glow-subtle);
+    border-color: rgba(255, 107, 0, 0.3);
+  }
+}

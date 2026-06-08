@@ -1,0 +1,4 @@
+{{- $href := .Get "href" -}}
+{{- $label := .Get "label" | default "Click" -}}
+{{- $style := .Get "style" | default "primary" -}}
+<a href="{{ $href }}" class="btn-{{ $style }} btn-sm my-2">{{ $label }}</a>
