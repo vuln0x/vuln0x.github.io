@@ -23,4 +23,4 @@ Cisco Cybersecurity, Postman API Expert, TryHackMe (Pre Security, Security Princ
 - LinkedIn: [alakati-rithesh-chandra](https://linkedin.com/in/alakati-rithesh-chandra)
 - Email: alakatiritheshchandra04@gmail.com
 
-> Replace `static/files/resume.pdf` with your actual resume PDF.
+
