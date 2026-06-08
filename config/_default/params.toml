@@ -35,7 +35,11 @@ tagline = 'Documenting my journey through cybersecurity, penetration testing, CT
   repo = 'zer0arc4/zer0arc4.github.io'
   repoId = 'R_kgDOS0PC0Q'
   category = 'Comments'
+<<<<<<< HEAD
   categoryId = 'DIC_kwDOS0PC0c4C-vfD'
+=======
+  categoryId = 'DIC_kwDOS0PC0c4C-vfE'
+>>>>>>> bb96dabb374aea7c685458527b4b91e872d8cb6c
   mapping = 'pathname'
   theme = 'noborder_dark'
   lang = 'en'
