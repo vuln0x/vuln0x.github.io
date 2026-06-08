@@ -127,7 +127,7 @@
   .badge-platform { @apply bg-ember-primary/20 text-ember-soft; }
 
   .prose-ember {
-    @apply prose prose-invert prose-ember max-w-none;
+    @apply prose prose-invert max-w-none;
     --tw-prose-body: var(--color-text-secondary);
     --tw-prose-headings: var(--color-text-primary);
     --tw-prose-links: var(--color-accent-primary);
