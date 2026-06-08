@@ -1,7 +1,23 @@
 ---
-title: "BANK Writeup"
+title: "BANK Writeup - VulNyx"
+date: {{ .Date }}
 description: "Vulnyx machine writeups and walkthroughs."
+summary: ""
 platform: "vulnyx"
+difficulty: "easy"
+os: "Linux"
+points: 0
+status: "active"
+featured: false
+featured_image: "/images/writeups/placeholder.svg"
+tags: [Bank, JWT, SMB, REC]
+skills: []
+comments: false
+draft: true
+
+
+
+
 ---
 # [VulNyx](https://vulnyx.com/) – BANK Writeup
 
