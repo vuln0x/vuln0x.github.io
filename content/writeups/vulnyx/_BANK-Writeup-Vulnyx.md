@@ -1,3 +1,8 @@
+---
+title: "BANK Writeup"
+description: "Vulnyx machine writeups and walkthroughs."
+platform: "vulnyx"
+---
 # [VulNyx](https://vulnyx.com/) – BANK Writeup
 
 <img width="671" height="426" alt="image" src="https://github.com/user-attachments/assets/9b4db2b3-4119-4c80-83f6-b70d05cde7c8" />
