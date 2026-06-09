@@ -1,11 +1,11 @@
 ---
 title: "About"
-description: "Learn about Rithesh Chandra Alakati — cybersecurity student, penetration tester, and aspiring red teamer."
+description: "Learn about zer0arc4 — cybersecurity student, penetration tester, and aspiring red teamer."
 ---
 
 ## Biography
 
-I'm **Rithesh Chandra Alakati**, a cybersecurity student with a passion for penetration testing, red teaming, and continuous learning. I document my journey through CTF writeups, lab machines, security research, and tool development — building practical skills across offensive security, networking, and application security.
+**zer0arc4** is a cybersecurity student with a passion for penetration testing, red teaming, and continuous learning. This site documents the journey through CTF writeups, lab machines, security research, and tool development — building practical skills across offensive security, networking, and application security.
 
 ## Education
 
@@ -14,21 +14,17 @@ I'm **Rithesh Chandra Alakati**, a cybersecurity student with a passion for pene
 
 ## Technical Skills
 
-My core competencies span **Linux & Windows administration**, **networking** (TCP/IP, OSI model, subnetting), **programming** (Python, Java, C, Bash), and **security tooling** (Nmap, Wireshark, Burp Suite, Caido, Metasploit, Postman).
+Core competencies span **Linux & Windows administration**, **networking** (TCP/IP, OSI model, subnetting), **programming** (Python, Java, C, Bash), and **security tooling** (Nmap, Wireshark, Burp Suite, Caido, Metasploit, Postman).
 
-I specialize in **web security**, **API security**, **privilege escalation**, and **Active Directory** attack paths.
+Specializations include **web security**, **API security**, **privilege escalation**, and **Active Directory** attack paths.
 
 ## Certifications
 
-I've earned certifications from Cisco, Postman, TryHackMe, HTB Academy, and completed the Tata Cybersecurity Analyst job simulation on Forage. See my [certifications page](/certifications/) for the full list.
+Certifications from Cisco, Postman, TryHackMe, HTB Academy, and Tata (Forage). See the [certifications page](/certifications/) for the full list.
 
 ## Career Goals
 
-My goal is to become a professional **penetration tester** and **red team operator**, contributing to the security community through open-source tools, detailed writeups, and security research.
-
-## Learning Journey
-
-I follow a structured approach: fundamentals → hands-on labs → CTF competitions → tool development → research. Every machine I solve and every project I build gets documented here.
+Become a professional **penetration tester** and **red team operator**, contributing to the security community through open-source tools, detailed writeups, and security research.
 
 ## Tool Stack
 

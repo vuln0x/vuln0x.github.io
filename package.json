@@ -1,7 +1,7 @@
 {
   "name": "zer0arc4-portfolio",
   "version": "1.0.0",
-  "description": "Cyber Ember — Cybersecurity Portfolio by Rithesh Chandra Alakati",
+  "description": "zer0arc4 — Cybersecurity Portfolio",
   "private": true,
   "scripts": {
     "dev": "hugo server -D --disableFastRender",

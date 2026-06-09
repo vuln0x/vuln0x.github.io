@@ -2,11 +2,12 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "{{ .Site.Data.site.name }}",
-  "jobTitle": "{{ .Site.Data.site.title }}",
+  "name": "{{ .Site.Params.brand.name }}",
+  "alternateName": "zer0arc4",
+  "jobTitle": "{{ .Site.Params.brand.title }}",
   "url": "{{ .Site.BaseURL }}",
   "email": "{{ .Site.Data.site.email }}",
-  "image": "{{ .Site.Data.site.profile_image | absURL }}",
+  "image": "{{ (.Site.Params.brand.logo | default "/images/logo.svg") | absURL }}",
   "sameAs": [
     "{{ .Site.Params.social.github }}",
     "{{ .Site.Params.social.linkedin }}"

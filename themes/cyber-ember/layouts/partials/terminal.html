@@ -12,7 +12,7 @@
     <div
       id="interactive-terminal"
       class="terminal-window max-w-3xl mx-auto"
-      data-prompt="{{ $terminal.prompt }}"
+      data-prompt="{{ $terminal.prompt | default "zer0arc4@portfolio:~$" }}"
       data-banner="{{ $terminal.banner }}"
       data-commands="{{ $commandsJSON | jsonify }}"
     >
@@ -20,7 +20,7 @@
         <span class="terminal-dot bg-red-500"></span>
         <span class="terminal-dot bg-yellow-500"></span>
         <span class="terminal-dot bg-green-500"></span>
-        <span class="ml-2 text-text-muted text-xs">cyber-ember — bash</span>
+        <span class="ml-2 text-text-muted text-xs">zer0arc4 — bash</span>
       </div>
       <div class="terminal-body">
         <div class="terminal-output"></div>

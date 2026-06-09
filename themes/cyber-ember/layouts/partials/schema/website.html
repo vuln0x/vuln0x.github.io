@@ -2,12 +2,12 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "{{ .Site.Data.site.name }}",
+  "name": "{{ .Site.Params.brand.name }}",
   "url": "{{ .Site.BaseURL }}",
   "description": "{{ .Site.Params.description }}",
   "author": {
     "@type": "Person",
-    "name": "{{ .Site.Data.site.name }}"
+    "name": "{{ .Site.Params.brand.name }}"
   },
   "potentialAction": {
     "@type": "SearchAction",

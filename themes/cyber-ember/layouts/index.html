@@ -11,7 +11,12 @@
         </div>
         <a href="{{ "/writeups/" | relURL }}" class="btn-ghost btn-sm hidden sm:inline-flex">View All →</a>
       </div>
-      {{- $writeups := where .Site.RegularPages "Section" "writeups" -}}
+      {{- $writeups := slice -}}
+      {{- range .Site.RegularPages -}}
+        {{- if hasPrefix .File.Dir "writeups/" -}}
+          {{- $writeups = $writeups | append . -}}
+        {{- end -}}
+      {{- end -}}
       {{- $featured := where $writeups "Params.featured" true | first 3 -}}
       {{- if gt (len $featured) 0 -}}
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -64,28 +69,7 @@
     </div>
   </section>
 
-  {{ partial "skills-matrix.html" . }}
-
-  <!-- Certifications -->
-  <section class="py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between mb-8">
-        <div>
-          <h2 class="section-title">Certifications</h2>
-          <p class="section-subtitle mb-0">Completed training and certifications</p>
-        </div>
-        <a href="{{ "/certifications/" | relURL }}" class="btn-ghost btn-sm hidden sm:inline-flex">View All →</a>
-      </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-        {{ range first 8 .Site.Data.certifications.certifications }}
-          {{ partial "certification-card.html" . }}
-        {{ end }}
-      </div>
-    </div>
-  </section>
-
-  {{ partial "learning-timeline.html" . }}
   {{ partial "stats-dashboard.html" . }}
-  {{ partial "terminal.html" . }}
+  {{ partial "activity-timeline.html" (dict "context" . "limit" 5 "showViewAll" true) }}
   {{ partial "contact-cta.html" . }}
 {{ end }}

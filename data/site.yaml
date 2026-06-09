@@ -1,9 +1,9 @@
-name: "Rithesh Chandra Alakati"
+name: "zer0arc4"
 title: "Cybersecurity Student | Penetration Tester | Aspiring Red Teamer"
 tagline: "Documenting my journey through cybersecurity, penetration testing, CTFs, research, and tool development."
 email: "alakatiritheshchandra04@gmail.com"
 location: "India"
-profile_image: "/images/profile/avatar.svg"
+logo: "/images/logo.svg"
 
 social:
   github: "https://github.com/zer0arc4"
@@ -16,7 +16,7 @@ resume:
   download_label: "Download Resume"
 
 intro: |
-  I'm a cybersecurity student passionate about penetration testing, red teaming, and 
-  continuous learning. I document my journey through CTF writeups, lab machines, 
+  Cybersecurity student passionate about penetration testing, red teaming, and 
+  continuous learning. Documenting the journey through CTF writeups, lab machines, 
   security research, and tool development — building practical skills across 
   offensive security, networking, and application security.

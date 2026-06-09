@@ -19,8 +19,8 @@
   weight = 40
 
 [[main]]
-  name = 'Notes'
-  url = '/notes/'
+  name = 'Activity'
+  url = '/activity/'
   weight = 50
 
 [[main]]
@@ -54,8 +54,8 @@
   weight = 30
 
 [[footer]]
-  name = 'Notes'
-  url = '/notes/'
+  name = 'Activity'
+  url = '/activity/'
   weight = 40
 
 [[footer]]

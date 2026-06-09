@@ -4,15 +4,15 @@
 
   <header class="mb-10 flex flex-col md:flex-row items-start gap-8">
     <img
-      src="{{ .Site.Data.site.profile_image }}"
-      alt="{{ .Site.Data.site.name }}"
-      class="w-40 h-40 rounded-2xl object-cover border-2 border-ember-border glow-border"
-      width="160"
-      height="160"
+      src="{{ .Site.Params.brand.logo | default "/images/logo.svg" }}"
+      alt="{{ .Site.Params.brand.name }}"
+      class="w-32 h-32 rounded-2xl object-cover border-2 border-ember-border glow-border"
+      width="128"
+      height="128"
     >
     <div>
       <h1 class="text-4xl font-bold text-text-primary mb-2">{{ .Title }}</h1>
-      <p class="text-ember-soft font-medium mb-4">{{ .Site.Data.site.title }}</p>
+      <p class="text-ember-soft font-medium mb-4">{{ .Site.Params.brand.title }}</p>
       <div class="flex flex-wrap gap-3">
         <a href="{{ .Site.Params.social.github }}" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm">GitHub</a>
         <a href="{{ .Site.Params.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="btn-ghost btn-sm">LinkedIn</a>

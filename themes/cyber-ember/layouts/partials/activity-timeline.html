@@ -1,0 +1,48 @@
+{{- $limit := .limit | default 0 -}}
+{{- $showViewAll := .showViewAll | default false -}}
+{{- $ctx := .context -}}
+
+{{- partial "build-activities.html" $ctx -}}
+{{- $activities := $ctx.Scratch.Get "activities" -}}
+{{- if gt $limit 0 -}}
+  {{- $activities = first $limit $activities -}}
+{{- end -}}
+
+<section class="py-16{{ if .bgSecondary }} bg-ember-bg-secondary{{ end }}">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between mb-8">
+      <div>
+        <h2 class="section-title">Activity Timeline</h2>
+        <p class="section-subtitle mb-0">Latest writeups, projects, articles, and certifications</p>
+      </div>
+      {{- if $showViewAll -}}
+      <a href="{{ "/activity/" | relURL }}" class="btn-ghost btn-sm hidden sm:inline-flex">View All →</a>
+      {{- end -}}
+    </div>
+
+    {{- if gt (len $activities) 0 -}}
+    <div class="relative max-w-3xl mx-auto">
+      <div class="timeline-line"></div>
+      <div class="space-y-6">
+        {{- range $activities -}}
+        <div class="relative pl-12">
+          <div class="timeline-dot top-1"></div>
+          <a href="{{ .url }}" class="ember-card p-5 block group">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="badge badge-platform">{{ .type }}</span>
+              <time class="text-text-muted text-sm font-mono" datetime="{{ .date.Format "2006-01-02" }}">{{ .date.Format "Jan 2, 2006" }}</time>
+            </div>
+            <h3 class="text-text-primary font-semibold group-hover:text-ember-primary transition-colors">{{ .title }}</h3>
+            {{- with .summary -}}
+            <p class="text-text-muted text-sm mt-1 line-clamp-2">{{ . }}</p>
+            {{- end -}}
+          </a>
+        </div>
+        {{- end -}}
+      </div>
+    </div>
+    {{- else -}}
+    <p class="text-text-muted text-center">No activity yet. Publish content to see it here automatically.</p>
+    {{- end -}}
+  </div>
+</section>

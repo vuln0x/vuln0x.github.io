@@ -1,16 +1,18 @@
 <header id="site-header" class="sticky top-0 z-40 transition-all duration-300 border-b border-transparent">
-  <div class="bg-ember-bg/80 backdrop-blur-xl">
+  <div class="header-backdrop bg-ember-bg/80 backdrop-blur-xl">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
       <div class="flex items-center justify-between h-16">
-        <!-- Logo -->
         <a href="{{ "/" | relURL }}" class="flex items-center gap-2 group">
-          <span class="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center text-white font-bold text-sm group-hover:shadow-glow transition-shadow">
-            {{ .Site.Params.brand.initials }}
-          </span>
-          <span class="hidden sm:block font-semibold text-text-primary text-sm">Cyber Ember</span>
+          <img
+            src="{{ .Site.Params.brand.logo | default "/images/logo.svg" }}"
+            alt="{{ .Site.Params.brand.name }}"
+            class="w-8 h-8 rounded-lg object-cover group-hover:shadow-glow transition-shadow"
+            width="32"
+            height="32"
+          >
+          <span class="hidden sm:block font-semibold text-text-primary text-sm">{{ .Site.Params.brand.name }}</span>
         </a>
 
-        <!-- Desktop Nav -->
         <div class="hidden lg:flex items-center gap-6">
           {{ range .Site.Menus.main }}
           <a href="{{ .URL }}" class="nav-link {{ if $.IsMenuCurrent "main" . }}nav-link-active{{ end }}">
@@ -19,7 +21,6 @@
           {{ end }}
         </div>
 
-        <!-- Right Actions -->
         <div class="flex items-center gap-2">
           {{ if .Site.Params.search.enabled }}
           <button data-search-open class="p-2 text-text-muted hover:text-ember-primary transition-colors rounded-lg" aria-label="Search">
@@ -36,9 +37,7 @@
             <svg data-icon="moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
           </button>
 
-          <a href="{{ "/resume/" | relURL }}" class="hidden md:inline-flex btn-primary btn-sm">
-            Resume
-          </a>
+          <a href="{{ "/resume/" | relURL }}" class="hidden md:inline-flex btn-primary btn-sm">Resume</a>
 
           <button id="mobile-menu-btn" class="lg:hidden p-2 text-text-muted hover:text-ember-primary transition-colors rounded-lg" aria-label="Open menu" aria-expanded="false">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -46,7 +45,6 @@
         </div>
       </div>
 
-      <!-- Mobile Menu -->
       <div id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-ember-border mt-2 pt-4">
         <div class="flex flex-col gap-3">
           {{ range .Site.Menus.main }}

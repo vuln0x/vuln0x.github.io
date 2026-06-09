@@ -2,11 +2,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+{{- $siteName := .Site.Params.brand.name | default .Site.Title -}}
 {{- $title := "" -}}
 {{- if .IsHome -}}
-  {{- $title = .Site.Data.site.name -}}
+  {{- $title = $siteName -}}
 {{- else if .Title -}}
-  {{- $title = printf "%s | %s" .Title .Site.Data.site.name -}}
+  {{- $title = printf "%s | %s" .Title $siteName -}}
 {{- else -}}
   {{- $title = .Site.Title -}}
 {{- end -}}
@@ -17,36 +18,30 @@
 <meta name="author" content="{{ .Site.Params.author }}">
 <link rel="canonical" href="{{ .Permalink }}">
 
-<!-- Open Graph -->
 <meta property="og:title" content="{{ $title }}">
 <meta property="og:description" content="{{ $description | plainify | truncate 160 }}">
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:site_name" content="{{ .Site.Data.site.name }}">
+<meta property="og:site_name" content="{{ $siteName }}">
 {{- $ogImage := .Params.featured_image | default .Site.Params.seo.og_image -}}
 <meta property="og:image" content="{{ $ogImage | absURL }}">
 
-<!-- Twitter -->
 <meta name="twitter:card" content="{{ .Site.Params.seo.twitter_card }}">
 <meta name="twitter:title" content="{{ $title }}">
 <meta name="twitter:description" content="{{ $description | plainify | truncate 160 }}">
 <meta name="twitter:image" content="{{ $ogImage | absURL }}">
 
-<!-- RSS -->
 {{ with .OutputFormats.Get "rss" }}
 <link rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" href="{{ .Permalink }}">
 {{ end }}
 
-<!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-<!-- Styles -->
 {{ $css := resources.Get "css/main.css" }}
 {{ $css = $css | css.PostCSS }}
 {{ if hugo.IsProduction }}
@@ -60,13 +55,11 @@
 {{ end }}
 <link rel="stylesheet" href="{{ $chroma.RelPermalink }}">
 
-<!-- Structured Data -->
 {{ partial "schema/website.html" . }}
 {{ if .IsHome }}{{ partial "schema/person.html" . }}{{ end }}
-{{ if and .IsPage (or (eq .Section "blog") (eq .Section "writeups")) }}{{ partial "schema/article.html" . }}{{ end }}
+{{ if and .IsPage (or (eq .Section "blog") (hasPrefix .File.Dir "writeups/")) }}{{ partial "schema/article.html" . }}{{ end }}
 {{ if .Site.Params.features.breadcrumbs }}{{ partial "schema/breadcrumb.html" . }}{{ end }}
 
-<!-- Plausible Analytics -->
 {{ if and hugo.IsProduction .Site.Params.analytics.enabled (eq .Site.Params.analytics.provider "plausible") }}
 <script defer data-domain="{{ .Site.Params.analytics.domain }}" src="https://plausible.io/js/script.js"></script>
 {{ end }}

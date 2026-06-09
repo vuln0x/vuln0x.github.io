@@ -1,14 +1,14 @@
-# Cyber Ember Theme Parameters
+# zer0arc4 Theme Parameters
 
 description = 'Documenting my journey through cybersecurity, penetration testing, CTFs, research, and tool development.'
-author = 'Rithesh Chandra Alakati'
+author = 'zer0arc4'
 tagline = 'Documenting my journey through cybersecurity, penetration testing, CTFs, research, and tool development.'
 
 # Branding
 [brand]
-  name = 'Rithesh Chandra Alakati'
+  name = 'zer0arc4'
   title = 'Cybersecurity Student | Penetration Tester | Aspiring Red Teamer'
-  initials = 'RCA'
+  logo = '/images/logo.svg'
 
 # Social
 [social]
@@ -57,9 +57,9 @@ tagline = 'Documenting my journey through cybersecurity, penetration testing, CT
 
 # Features
 [features]
-  terminal = true
+  terminal = false
   stats = true
-  skills_matrix = true
+  skills_matrix = false
   timeline = true
   reading_time = true
   related_posts = true
@@ -75,10 +75,8 @@ tagline = 'Documenting my journey through cybersecurity, penetration testing, CT
     'featured_writeups',
     'featured_projects',
     'latest_articles',
-    'skills_matrix',
-    'certifications',
-    'timeline',
     'stats',
+    'activity_timeline',
     'contact_cta',
   ]
 

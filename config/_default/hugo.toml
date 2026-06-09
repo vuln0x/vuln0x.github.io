@@ -1,6 +1,6 @@
 baseURL = 'https://zer0arc4.github.io/'
 languageCode = 'en-us'
-title = 'Rithesh Chandra Alakati'
+title = 'zer0arc4'
 theme = 'cyber-ember'
 
 enableRobotsTXT = true

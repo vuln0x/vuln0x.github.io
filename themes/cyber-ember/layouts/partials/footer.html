@@ -1,13 +1,16 @@
 <footer class="border-t border-ember-border bg-ember-bg-secondary mt-auto">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Brand -->
       <div>
         <div class="flex items-center gap-2 mb-4">
-          <span class="w-8 h-8 rounded-lg bg-gradient-primary flex items-center justify-center text-white font-bold text-sm">
-            {{ .Site.Params.brand.initials }}
-          </span>
-          <span class="font-semibold text-text-primary">Cyber Ember</span>
+          <img
+            src="{{ .Site.Params.brand.logo | default "/images/logo.svg" }}"
+            alt="{{ .Site.Params.brand.name }}"
+            class="w-8 h-8 rounded-lg object-cover"
+            width="32"
+            height="32"
+          >
+          <span class="font-semibold text-text-primary">{{ .Site.Params.brand.name }}</span>
         </div>
         <p class="text-text-muted text-sm leading-relaxed mb-4">
           {{ .Site.Params.tagline }}
@@ -30,7 +33,6 @@
         </div>
       </div>
 
-      <!-- Quick Links -->
       <div>
         <h3 class="text-text-primary font-semibold mb-4">Quick Links</h3>
         <ul class="space-y-2">
@@ -42,7 +44,6 @@
         </ul>
       </div>
 
-      <!-- Contact -->
       <div>
         <h3 class="text-text-primary font-semibold mb-4">Get in Touch</h3>
         <p class="text-text-muted text-sm mb-4">
@@ -54,10 +55,10 @@
 
     <div class="border-t border-ember-border mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
       <p class="text-text-muted text-sm">
-        &copy; {{ now.Year }} {{ .Site.Data.site.name }}. All rights reserved.
+        &copy; {{ now.Year }} {{ .Site.Params.brand.name }}. All rights reserved.
       </p>
       <p class="text-text-muted text-xs">
-        Built with <a href="https://gohugo.io" class="text-ember-primary hover:underline" target="_blank" rel="noopener">Hugo</a> &amp; Cyber Ember Theme
+        Built with <a href="https://gohugo.io" class="text-ember-primary hover:underline" target="_blank" rel="noopener">Hugo</a>
       </p>
     </div>
   </div>

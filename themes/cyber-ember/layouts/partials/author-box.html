@@ -1,16 +1,16 @@
 <div class="ember-card p-6 flex items-start gap-4 mt-12">
   <img
-    src="{{ .Site.Data.site.profile_image }}"
-    alt="{{ .Site.Data.site.name }}"
+    src="{{ .Site.Params.brand.logo | default "/images/logo.svg" }}"
+    alt="{{ .Site.Params.brand.name }}"
     class="w-16 h-16 rounded-xl object-cover border border-ember-border shrink-0"
     width="64"
     height="64"
     loading="lazy"
   >
   <div>
-    <p class="text-text-primary font-semibold">{{ .Site.Data.site.name }}</p>
-    <p class="text-ember-soft text-sm mb-2">{{ .Site.Data.site.title }}</p>
-    <p class="text-text-muted text-sm">{{ .Site.Data.site.tagline }}</p>
+    <p class="text-text-primary font-semibold">{{ .Site.Params.brand.name }}</p>
+    <p class="text-ember-soft text-sm mb-2">{{ .Site.Params.brand.title }}</p>
+    <p class="text-text-muted text-sm">{{ .Site.Params.tagline }}</p>
     <div class="flex gap-3 mt-3">
       <a href="{{ .Site.Params.social.github }}" target="_blank" rel="noopener noreferrer" class="text-ember-primary text-sm hover:underline">GitHub</a>
       <a href="{{ .Site.Params.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="text-ember-primary text-sm hover:underline">LinkedIn</a>

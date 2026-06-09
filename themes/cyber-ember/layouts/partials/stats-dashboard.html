@@ -1,7 +1,12 @@
 {{- $stats := .Site.Data.stats -}}
-{{- $writeupCount := len (where .Site.RegularPages "Section" "writeups") -}}
+{{- $writeupCount := 0 -}}
+{{- range .Site.RegularPages -}}
+  {{- if and (hasPrefix .File.Dir "writeups/") (not .Draft) -}}
+    {{- $writeupCount = add $writeupCount 1 -}}
+  {{- end -}}
+{{- end -}}
 {{- $projectCount := len (where .Site.RegularPages "Section" "projects") -}}
-{{- $certCount := len .Site.Data.certifications.certifications -}}
+{{- $certCount := len (where .Site.RegularPages "Section" "certifications") -}}
 {{- $labCount := $writeupCount -}}
 
 {{- $counters := dict
@@ -12,7 +17,7 @@
   "learning_hours" $stats.overrides.learning_hours
 -}}
 
-<section class="py-16">
+<section class="py-16 bg-ember-bg-secondary">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="section-title text-center">Statistics Dashboard</h2>
     <p class="section-subtitle text-center">Tracking progress across labs, projects, and certifications</p>

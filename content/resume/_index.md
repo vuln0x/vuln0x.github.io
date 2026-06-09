@@ -1,9 +1,9 @@
 ---
 title: "Resume"
-description: "View and download the resume of Rithesh Chandra Alakati — Cybersecurity Student, Penetration Tester, Aspiring Red Teamer."
+description: "View and download the resume of zer0arc4 — Cybersecurity Student, Penetration Tester, Aspiring Red Teamer."
 ---
 
-## Rithesh Chandra Alakati
+## zer0arc4
 
 **Cybersecurity Student | Penetration Tester | Aspiring Red Teamer**
 
@@ -22,5 +22,3 @@ Cisco Cybersecurity, Postman API Expert, TryHackMe (Pre Security, Security Princ
 - GitHub: [zer0arc4](https://github.com/zer0arc4)
 - LinkedIn: [alakati-rithesh-chandra](https://linkedin.com/in/alakati-rithesh-chandra)
 - Email: alakatiritheshchandra04@gmail.com
-
-

@@ -1,0 +1,28 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  {{ partial "breadcrumbs.html" . }}
+
+  <header class="mb-8">
+    <div class="flex flex-wrap items-center gap-2 mb-4">
+      <span class="badge badge-platform">certification</span>
+      {{ with .Params.status }}
+      <span class="badge badge-easy">{{ . }}</span>
+      {{ end }}
+      {{ with .Params.issuer }}
+      <span class="badge bg-ember-bg-secondary text-text-muted">{{ . }}</span>
+      {{ end }}
+    </div>
+    <h1 class="text-4xl font-bold text-text-primary mb-4">{{ .Title }}</h1>
+    <time class="text-text-muted text-sm font-mono" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    {{ with .Params.credential_url }}
+    <p class="mt-4"><a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-ember-primary hover:underline">Verify Credential →</a></p>
+    {{ end }}
+  </header>
+
+  <div class="prose-ember">
+    {{ .Content }}
+  </div>
+
+  {{ partial "author-box.html" . }}
+</article>
+{{ end }}
