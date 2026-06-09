@@ -1,7 +1,7 @@
 ---
 title: "Bank"
 date: 2026-06-09T21:10:28+05:30
-draft: true
+draft: false
 description: ""
 summary: ""
 tags: []
