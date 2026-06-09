@@ -1,7 +1,7 @@
-{{- $stats := .Site.Data.stats -}}
+{{- $stats := site.Data.stats -}}
 {{- $writeupCount := 0 -}}
 {{- range .Site.RegularPages -}}
-  {{- if and (hasPrefix .File.Dir "writeups/") (not .Draft) -}}
+  {{- if and .File (hasPrefix .File.Dir "writeups/") (not .Draft) (eq .Kind "page") -}}
     {{- $writeupCount = add $writeupCount 1 -}}
   {{- end -}}
 {{- end -}}

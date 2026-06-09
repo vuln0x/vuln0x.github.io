@@ -6,7 +6,7 @@
   "alternateName": "zer0arc4",
   "jobTitle": "{{ .Site.Params.brand.title }}",
   "url": "{{ .Site.BaseURL }}",
-  "email": "{{ .Site.Data.site.email }}",
+  "email": "{{ site.Data.site.email }}",
   "image": "{{ (.Site.Params.brand.logo | default "/images/logo.svg") | absURL }}",
   "sameAs": [
     "{{ .Site.Params.social.github }}",

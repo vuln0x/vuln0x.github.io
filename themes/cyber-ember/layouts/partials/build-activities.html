@@ -2,7 +2,7 @@
 {{- $activities := slice -}}
 
 {{- range .Site.RegularPages -}}
-  {{- if and (hasPrefix .File.Dir "writeups/") (not .Draft) (eq .Kind "page") -}}
+  {{- if and .File (hasPrefix .File.Dir "writeups/") (not .Draft) (eq .Kind "page") -}}
     {{- $summary := .Summary | default .Description | plainify | truncate 120 -}}
     {{- $activities = $activities | append (dict
       "title" .Title
@@ -53,4 +53,4 @@
   {{- end -}}
 {{- end -}}
 
-{{- $.Scratch.Set "activities" (sort $activities "date" "desc") -}}
+{{- .Scratch.Set "activities" (sort $activities "date" "desc") -}}

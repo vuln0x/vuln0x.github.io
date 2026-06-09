@@ -42,8 +42,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-{{ $css := resources.Get "css/main.css" }}
-{{ $css = $css | css.PostCSS }}
+{{ $css := resources.Get "css/style.css" }}
+{{ if not $css }}
+  {{ errorf "Missing assets/css/style.css — run: npm run build:css" }}
+{{ end }}
 {{ if hugo.IsProduction }}
   {{ $css = $css | minify | fingerprint }}
 {{ end }}

@@ -13,7 +13,7 @@
       </div>
       {{- $writeups := slice -}}
       {{- range .Site.RegularPages -}}
-        {{- if hasPrefix .File.Dir "writeups/" -}}
+        {{- if and .File (hasPrefix .File.Dir "writeups/") (not .Draft) (eq .Kind "page") -}}
           {{- $writeups = $writeups | append . -}}
         {{- end -}}
       {{- end -}}

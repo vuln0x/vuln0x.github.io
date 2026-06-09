@@ -15,7 +15,24 @@
     link.href = '/pagefind/pagefind-ui.css';
     document.head.appendChild(link);
 
-    await new Promise((resolve) => { script.onload = resolve; });
+    await new Promise((resolve, reject) => {
+      script.onload = () => {
+        const started = Date.now();
+        const waitForUI = () => {
+          if (window.PagefindUI) {
+            resolve();
+            return;
+          }
+          if (Date.now() - started > 10000) {
+            reject(new Error('PagefindUI failed to load'));
+            return;
+          }
+          setTimeout(waitForUI, 50);
+        };
+        waitForUI();
+      };
+      script.onerror = () => reject(new Error('Failed to load Pagefind'));
+    });
     pagefindLoaded = true;
     return window.pagefind;
   }
@@ -49,9 +66,14 @@
     modal.classList.remove('hidden');
     document.body.style.overflow = 'hidden';
 
-    await loadPagefind();
+    try {
+      await loadPagefind();
+    } catch (err) {
+      console.error(err);
+      return;
+    }
 
-    if (!modal.dataset.initialized) {
+    if (!modal.dataset.initialized && window.PagefindUI) {
       new window.PagefindUI({
         element: '#pagefind-search',
         showSubResults: true,

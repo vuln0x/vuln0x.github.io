@@ -38,11 +38,8 @@ jobs:
           hugo-version: '0.162.1'
           extended: true
 
-      - name: Build Hugo site
-        run: hugo --minify --gc --environment production
-
-      - name: Build Pagefind index
-        run: npx pagefind --site public
+      - name: Build site
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
