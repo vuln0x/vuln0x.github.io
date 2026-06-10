@@ -4,7 +4,11 @@ date: 2026-06-09T21:10:28+05:30
 draft: false
 description: ""
 summary: ""
-tags: []
+platform: "vulnyx"
+difficulty: "easy"
+os: "Linux"
+featured_image: "/images/writeups/placeholder.svg"
+tags: [JWT,REC]
 categories: []
 ---
 
