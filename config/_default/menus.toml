@@ -58,10 +58,6 @@
   url = '/activity/'
   weight = 40
 
-[[footer]]
-  name = 'Research'
-  url = '/research/'
-  weight = 50
 
 [[footer]]
   name = 'About'
