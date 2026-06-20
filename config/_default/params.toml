@@ -82,6 +82,7 @@ tagline = 'Documenting my journey through cybersecurity, penetration testing, CT
 
 # Difficulty colors
 [difficulty]
+  low = 'hsl(212, 71%, 45%)'
   easy = '#22C55E'
   medium = '#FF8C00'
   hard = '#EF4444'
