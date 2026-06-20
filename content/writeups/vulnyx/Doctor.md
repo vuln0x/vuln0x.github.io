@@ -8,14 +8,14 @@ difficulty: "low"
 os: "Linux"
 status: "active"
 featured: false
-featured_image: "/images/writeups/placeholder.svg"
+featured_image: "/images/writeups/vulnyx/doctor.png"
 tags: ["linux", "lfi", "ssh", "john", "privilege-escalation"]
 skills: ["nmap", "lfi", "john-the-ripper", "ssh", "privilege-escalation"]
 comments: false
 draft: false
 ---
 
-<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/1acc64c7-b17c-4ed3-93bf-184aa2e22877" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/doctor.png" />
 
 ## Overview
 

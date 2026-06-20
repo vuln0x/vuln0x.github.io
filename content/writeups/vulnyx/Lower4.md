@@ -8,7 +8,7 @@ difficulty: "low"
 os: "Linux"
 status: "active"
 featured: false
-featured_image: "/images/writeups/lower-4/lower-4-cover.png"
+featured_image: "/images/writeups/vulnyx/lower4.png"
 tags: ["linux", "ident", "ssh", "sudo", "privilege-escalation"]
 skills: ["nmap", "ident-user-enum", "hydra", "ssh", "privilege-escalation"]
 comments: false
@@ -20,7 +20,7 @@ draft: false
 A VulNyx machine involving username enumeration through the Ident protocol, SSH access using weak credentials, and privilege escalation through misconfigured sudo permissions.
 
 
-<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/7c739479-d265-454e-adc4-f25fa500ada8" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/lower4.png" />
 
 ---
 

@@ -8,7 +8,7 @@ difficulty: "low"
 os: "Linux"
 status: "active"
 featured: false
-featured_image: "/images/writeups/lower-3/lower-3-cover.png"
+featured_image: "/images/writeups/vulnyx/lower3.png"
 tags: ["linux", "nfs", "php", "rce", "privilege-escalation"]
 skills: ["nmap", "nfs-enumeration", "php", "reverse-shell", "privilege-escalation"]
 comments: false
@@ -18,7 +18,7 @@ draft: false
 
 A VulNyx machine focused on NFS misconfiguration, remote code execution through a writable web root, and privilege escalation
 
-<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/4b1ce1c1-de38-47b6-af96-8e1e51f0398e" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/lower3.png" />
 
 ---
 

@@ -8,7 +8,7 @@ difficulty: "low"
 os: "Linux"
 status: "active"
 featured: false
-featured_image: "/images/writeups/lower-6/lower-6-cover.png"
+featured_image: "/images/writeups/vulnyx/lower6.png"
 tags: ["linux", "redis", "ssh", "capabilities", "privilege-escalation"]
 skills: ["nmap", "redis-cli", "hydra", "linux-capabilities", "gdb"]
 comments: false
@@ -19,7 +19,7 @@ draft: false
 
 A VulNyx machine involving Redis enumeration, credential disclosure, SSH access through password reuse, and privilege escalation via a misconfigured Linux capability on `gdb`.
 
-<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/eed9b25c-1c97-4320-a98d-56c1fa66e19f" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/lower6.png" />
 
 ---
 

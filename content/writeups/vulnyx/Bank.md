@@ -15,7 +15,8 @@ comments: false
 draft: false
 ---
 
-<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/8a3cdac8-2a51-4494-a2be-68549fa3c620" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/bank.png" />
+
 
 ---
 

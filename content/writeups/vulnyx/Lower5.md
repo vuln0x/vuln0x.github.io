@@ -8,7 +8,7 @@ difficulty: "low"
 os: "Linux"
 status: "active"
 featured: false
-featured_image: "/images/writeups/lower-5/lower-5-cover.png"
+featured_image: "/images/writeups/vulnyx/lower5.png"
 tags: ["linux", "lfi", "apache", "log-poisoning", "gpg", "privilege-escalation"]
 skills: ["ffuf", "lfi", "apache-log-poisoning", "john-the-ripper", "sudo"]
 comments: false
@@ -19,7 +19,7 @@ draft: false
 
 A VulNyx machine involving Local File Inclusion (LFI), Apache Log Poisoning, Remote Code Execution, misconfigured sudo permissions, and credential recovery through a weak GPG passphrase. :contentReference[oaicite:0]{index=0}
 
-<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/dfdcafe4-7000-41d2-a391-dbadfcdcab82" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/lower5.png" />
 
 ---
 

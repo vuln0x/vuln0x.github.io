@@ -8,7 +8,7 @@ difficulty: "low"
 os: "Linux"
 status: "active"
 featured: false
-featured_image: "/images/writeups/lower/lower-cover.png"
+featured_image: "/images/writeups/vulnyx/lower.png"
 tags: ["linux", "vhost", "ffuf", "hydra", "privilege-escalation"]
 skills: ["nmap", "ffuf", "cewl", "hydra", "linux-enumeration"]
 comments: false
@@ -19,7 +19,7 @@ draft: false
 
 A VulNyx machine focused on virtual host discovery, custom password list generation, SSH credential attacks, and privilege escalation through a writable `/etc/group` file.
 
-<img width="831" height="518" alt="image" src="https://github.com/user-attachments/assets/9c57578e-e5da-4392-a452-acb84e140793" />
+<img width="831" height="518" alt="image" src="/images/writeups/vulnyx/lower.png" />
 
 ---
 

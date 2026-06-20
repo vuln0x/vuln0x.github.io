@@ -8,7 +8,7 @@ difficulty: "low"
 os: "Windows"
 status: "active"
 featured: false
-featured_image: "/images/writeups/eternal/eternal-cover.png"
+featured_image: "/images/writeups/vulnyx/eternal.png"
 tags: ["windows", "smb", "eternalblue", "ms17-010", "metasploit"]
 skills: ["nmap", "smb-enumeration", "metasploit", "eternalblue", "windows"]
 comments: false
@@ -19,7 +19,7 @@ draft: false
 
 A VulNyx machine focused on SMB enumeration, vulnerability identification, and exploitation of the MS17-010 (EternalBlue) vulnerability to gain SYSTEM-level access on a Windows 7 host.
 
-<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/639f2368-8de7-488d-8454-3a4a7a55125a" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/eternal.png" />
 
 ---
 

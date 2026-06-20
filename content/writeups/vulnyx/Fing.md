@@ -8,7 +8,7 @@ difficulty: "low"
 os: "Linux"
 status: "active"
 featured: false
-featured_image: "/images/writeups/fing/fing-cover.png"
+featured_image: "/images/writeups/vulnyx/fing.png"
 tags: ["linux", "finger", "ssh", "doas", "privilege-escalation"]
 skills: ["nmap", "finger-enumeration", "hydra", "ssh", "privilege-escalation"]
 comments: false
@@ -20,7 +20,7 @@ draft: false
 A VulNyx machine focused on user enumeration through the Finger service, SSH access using weak credentials, and privilege escalation via a misconfigured `doas` configuration.
 
 
-<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/a04ca640-b59e-4818-bbb2-644d45d8a692" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/eternal.png" />
 
 ---
 

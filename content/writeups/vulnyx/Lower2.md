@@ -8,7 +8,7 @@ difficulty: "low"
 os: "Linux"
 status: "active"
 featured: false
-featured_image: "/images/writeups/lower-2/lower-2-cover.png"
+featured_image: "/images/writeups/vulnyx/lower2.png"
 tags: ["linux", "telnet", "hydra", "shadow", "privilege-escalation"]
 skills: ["nmap", "hydra", "telnet", "linux-enumeration", "privilege-escalation"]
 comments: false
@@ -19,7 +19,7 @@ draft: false
 
 A VulNyx machine involving Telnet enumeration, credential attacks, information disclosure, and privilege escalation through a writable `/etc/shadow` file.
 
-<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/931b5f9b-8349-436a-a72b-1c3b78c0a877" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/lower2.png" />
 
 ---
 

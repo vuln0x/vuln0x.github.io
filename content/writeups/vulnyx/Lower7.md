@@ -8,7 +8,7 @@ difficulty: "low"
 os: "Linux"
 status: "active"
 featured: false
-featured_image: "/images/writeups/lower-7/lower-7-cover.png"
+featured_image: "/images/writeups/vulnyx/lower7.png"
 tags: ["linux", "ftp", "nodejs", "shadow", "privilege-escalation"]
 skills: ["nmap", "hydra", "ftp", "nodejs", "john-the-ripper"]
 comments: false
@@ -19,7 +19,7 @@ draft: false
 
 A VulNyx machine involving FTP credential attacks, arbitrary file upload, remote code execution through a Node.js application, and privilege escalation through shadow group access.
 
-<img width="842" height="438" alt="image" src="https://github.com/user-attachments/assets/7b96c8b0-e934-4b03-bfff-e2479372e421" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/lower7.png" />
 
 ---
 
