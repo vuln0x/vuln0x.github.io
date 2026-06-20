@@ -1,6 +1,6 @@
 ---
 title: "BANK - Vulnyx"
-date: 2026-06-18
+date: 2026-05-30
 description: "VulNyx BANK writeup covering SMB enumeration, JWT analysis, file upload bypass, credential recovery, and Docker privilege escalation."
 summary: "Exploited anonymous SMB access, leaked JWT credentials, bypassed file upload restrictions for RCE, recovered KeePass credentials, and abused Docker group membership to gain root."
 platform: "vulnyx"

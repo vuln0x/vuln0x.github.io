@@ -1,6 +1,6 @@
 ---
 title: "Lower-5"
-date: 2026-06-18
+date: 2026-05-14
 description: "VulNyx Lower-5 writeup covering Local File Inclusion, Apache Log Poisoning, Remote Code Execution, and privilege escalation through password recovery."
 summary: "Exploited an LFI vulnerability to poison Apache logs, gained a reverse shell, abused sudo permissions, cracked a GPG passphrase, and recovered root credentials."
 platform: "vulnyx"

@@ -1,6 +1,6 @@
 ---
 title: "Lower-4"
-date: 2026-06-18
+date: 2026-05-12
 description: "VulNyx Lower-4 writeup covering username enumeration through Ident, SSH access via weak credentials, and privilege escalation through misconfigured sudo permissions."
 summary: "Enumerated a valid user using the Ident protocol, brute-forced SSH credentials, and abused sudo access to multitail to obtain root privileges."
 platform: "vulnyx"

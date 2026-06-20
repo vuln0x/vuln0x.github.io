@@ -1,6 +1,6 @@
 ---
 title: "Lower-2"
-date: 2026-06-18
+date: 2026-05-10
 description: "VulNyx Lower-2 writeup covering Telnet access, information disclosure, and privilege escalation through a writable /etc/shadow file."
 summary: "Enumerated services, identified a username from an SSH banner, brute-forced Telnet credentials, and gained root by modifying a writable /etc/shadow file."
 platform: "vulnyx"

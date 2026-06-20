@@ -1,6 +1,6 @@
 ---
 title: "Doctor - Vulnyx"
-date: 2026-06-18
+date: 2026-05-29
 description: "VulNyx Doctor writeup covering Local File Inclusion, SSH key extraction, passphrase cracking, and privilege escalation."
 summary: "Exploited LFI to retrieve an encrypted SSH key, cracked its passphrase, gained SSH access, and escalated privileges via a writable /etc/passwd file."
 platform: "vulnyx"
