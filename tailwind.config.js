@@ -75,6 +75,11 @@ module.exports = {
             '--tw-prose-code': theme('colors.ember.soft'),
             '--tw-prose-pre-bg': theme('colors.ember.bg-secondary'),
             maxWidth: 'none',
+            pre: {
+              marginTop: '0.5rem',
+              marginBottom: '0.5rem',
+              
+            }
           },
         },
       }),

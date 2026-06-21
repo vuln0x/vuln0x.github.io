@@ -4,20 +4,21 @@ date: 2026-06-18
 description: "Hack The Box Redeemer writeup." 
 summary: "Redis enumeration and flag retrieval through unauthenticated access." 
 platform: "hackthebox" 
-difficulty: "very easy" 
+difficulty: "easy" 
 os: "Linux" 
 points: 5 
 status: "active" 
-featured: false 
-featured_image: "/images/writeups/placeholder.svg" 
+featured: true 
+featured_image: "/images/writeups/hackthebox/Redeemer.jpg" 
 tags: ["redis", "enumeration", "database"] 
 skills: ["nmap", "redis-cli", "enumeration"] 
 comments: false 
 draft: false 
 ---
----
 
 ## 🎯 Target Overview
+<img width="842" height="438" alt="image" src="/images/writeups/hackthebox/Redeemer.jpg" />
+
 - Service Identified: Redis
 - Port: 6379
 - Attack Type: Misconfigured Redis (Unauthenticated Access)
