@@ -7,8 +7,8 @@ platform: "tryhackme"
 difficulty: "easy"
 os: "Linux"
 status: "active"
-featured: false
-featured_image: "/images/writeups/tryhackme/Cyborg.png"
+featured: true
+featured_image: "/images/writeups/tryhackme/Cyborg.jpg"
 tags: ["linux", "borg", "enumeration", "privilege-escalation"]
 skills: ["nmap", "ffuf", "john", "ssh", "privilege-escalation"]
 comments: false
@@ -17,7 +17,7 @@ draft: false
 
 > A box involving encrypted archives, source code analysis, and privilege escalation.
 
-<img width="842" height="438" alt="image" src="/images/writeups/tryhackme/Cyborg.png" />
+<img width="842" height="438" alt="image" src="/images/writeups/tryhackme/Cyborg.jpg" />
 
 ---
 
