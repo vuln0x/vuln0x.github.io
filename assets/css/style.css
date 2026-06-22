@@ -735,10 +735,6 @@ video {
   line-height: 1rem;
   font-weight: 500;
 }
-.badge-low {
-  background-color: rgba(59,130,246,.2);
-  color: #60A5FA;
-}
 .badge-easy {
   background-color: rgb(34 197 94 / 0.2);
   --tw-text-opacity: 1;
@@ -1476,6 +1472,9 @@ video {
   padding-bottom: 0.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+.static {
+  position: static;
 }
 .absolute {
   position: absolute;
