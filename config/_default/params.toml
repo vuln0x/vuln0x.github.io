@@ -7,7 +7,7 @@ tagline = 'Documenting my journey through cybersecurity, penetration testing, CT
 # Branding
 [brand]
   name = 'zer0arc4'
-  title = 'Cybersecurity Student | Penetration Tester | Aspiring Red Teamer'
+  title = 'Cybersecurity Student | Penetration Testing & Red Teaming Enthusiast'
   logo = '/images/logo.svg'
 
 # Social
