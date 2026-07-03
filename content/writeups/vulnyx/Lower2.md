@@ -1,5 +1,5 @@
 ---
-title: "Lower-2"
+title: "Lower2 Writeup - Vulnyx"
 date: 2026-05-10
 description: "VulNyx Lower-2 writeup covering Telnet access, information disclosure, and privilege escalation through a writable /etc/shadow file."
 summary: "Enumerated services, identified a username from an SSH banner, brute-forced Telnet credentials, and gained root by modifying a writable /etc/shadow file."
@@ -9,7 +9,7 @@ os: "Linux"
 status: "active"
 featured: false
 featured_image: "/images/writeups/vulnyx/lower2.png"
-tags: ["linux", "telnet", "hydra", "shadow", "privilege-escalation"]
+tags: ["linux", "telnet", "hydra", "shadow", "privilege-escalation","Vulnyx","lower2"]
 skills: ["nmap", "hydra", "telnet", "linux-enumeration", "privilege-escalation"]
 comments: false
 draft: false

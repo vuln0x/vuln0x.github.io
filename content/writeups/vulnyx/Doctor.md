@@ -9,7 +9,7 @@ os: "Linux"
 status: "active"
 featured: false
 featured_image: "/images/writeups/vulnyx/doctor.png"
-tags: ["linux", "lfi", "ssh", "john", "privilege-escalation"]
+tags: ["linux", "lfi", "ssh", "john", "privilege-escalation","Vulnyx","doctor"]
 skills: ["nmap", "lfi", "john-the-ripper", "ssh", "privilege-escalation"]
 comments: false
 draft: false

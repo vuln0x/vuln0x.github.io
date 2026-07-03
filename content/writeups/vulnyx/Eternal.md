@@ -1,5 +1,5 @@
 ---
-title: "Eternal - Vulnyx"
+title: "Eternal Writeup - Vulnyx"
 date: 2026-05-28
 description: "VulNyx Eternal writeup covering SMBv1 enumeration, MS17-010 detection, EternalBlue exploitation, and SYSTEM-level access."
 summary: "Identified a vulnerable Windows 7 host, confirmed MS17-010, exploited EternalBlue using Metasploit, and obtained NT AUTHORITY\\SYSTEM privileges."
@@ -9,7 +9,7 @@ os: "Windows"
 status: "active"
 featured: false
 featured_image: "/images/writeups/vulnyx/eternal.png"
-tags: ["windows", "smb", "eternalblue", "ms17-010", "metasploit"]
+tags: ["windows", "smb", "eternalblue", "ms17-010", "metasploit","Vulnyx","etrenal"]
 skills: ["nmap", "smb-enumeration", "metasploit", "eternalblue", "windows"]
 comments: false
 draft: false

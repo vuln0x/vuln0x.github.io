@@ -1,5 +1,5 @@
 ---
-title: "Lower-3"
+title: "Lower3 Writeup - Vulnyx"
 date: 2026-05-13
 description: "VulNyx Lower-3 writeup covering NFS share abuse, remote code execution, and privilege escalation through a SUID Bash binary."
 summary: "Mounted an exposed NFS share, uploaded a PHP reverse shell, gained initial access, and escalated privileges through a writable web root and SUID Bash."
@@ -9,7 +9,7 @@ os: "Linux"
 status: "active"
 featured: false
 featured_image: "/images/writeups/vulnyx/lower3.png"
-tags: ["linux", "nfs", "php", "rce", "privilege-escalation"]
+tags: ["linux", "nfs", "php", "rce", "privilege-escalation","Vulnyx","lower3"]
 skills: ["nmap", "nfs-enumeration", "php", "reverse-shell", "privilege-escalation"]
 comments: false
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: "FING - Vulnyx"
+title: "FING Writeup - Vulnyx"
 date: 2026-05-25
 description: "VulNyx FING writeup covering Finger service enumeration, SSH access, and privilege escalation through a misconfigured doas configuration."
 summary: "Enumerated users through the Finger service, obtained SSH access with weak credentials, and escalated privileges via a vulnerable doas rule."
@@ -9,7 +9,7 @@ os: "Linux"
 status: "active"
 featured: false
 featured_image: "/images/writeups/vulnyx/fing.png"
-tags: ["linux", "finger", "ssh", "doas", "privilege-escalation"]
+tags: ["linux", "finger", "ssh", "doas", "privilege-escalation","Vulnyx","fing"]
 skills: ["nmap", "finger-enumeration", "hydra", "ssh", "privilege-escalation"]
 comments: false
 draft: false

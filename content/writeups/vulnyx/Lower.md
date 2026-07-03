@@ -1,5 +1,5 @@
 ---
-title: "Lower"
+title: "Lower Writeup - Vulnyx"
 date: 2026-05-09
 description: "VulNyx Lower writeup covering virtual host enumeration, SSH credential attacks, and privilege escalation through a writable /etc/group file."
 summary: "Discovered a hidden virtual host, generated custom passwords using CeWL, obtained SSH access through weak credentials, and escalated privileges by modifying a writable /etc/group file."
@@ -9,7 +9,7 @@ os: "Linux"
 status: "active"
 featured: false
 featured_image: "/images/writeups/vulnyx/lower.png"
-tags: ["linux", "vhost", "ffuf", "hydra", "privilege-escalation"]
+tags: ["linux", "vhost", "ffuf", "hydra", "privilege-escalation","Vulnyx","lower"]
 skills: ["nmap", "ffuf", "cewl", "hydra", "linux-enumeration"]
 comments: false
 draft: false

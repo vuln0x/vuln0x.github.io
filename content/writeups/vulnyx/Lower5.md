@@ -1,5 +1,5 @@
 ---
-title: "Lower-5"
+title: "Lower5 Writeup - Vulnyx"
 date: 2026-05-14
 description: "VulNyx Lower-5 writeup covering Local File Inclusion, Apache Log Poisoning, Remote Code Execution, and privilege escalation through password recovery."
 summary: "Exploited an LFI vulnerability to poison Apache logs, gained a reverse shell, abused sudo permissions, cracked a GPG passphrase, and recovered root credentials."
@@ -9,7 +9,7 @@ os: "Linux"
 status: "active"
 featured: false
 featured_image: "/images/writeups/vulnyx/lower5.png"
-tags: ["linux", "lfi", "apache", "log-poisoning", "gpg", "privilege-escalation"]
+tags: ["linux", "lfi", "apache", "log-poisoning", "gpg", "privilege-escalation","Vulnyx","lower5"]
 skills: ["ffuf", "lfi", "apache-log-poisoning", "john-the-ripper", "sudo"]
 comments: false
 draft: false
