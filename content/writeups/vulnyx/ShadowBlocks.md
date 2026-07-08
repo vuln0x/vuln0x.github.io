@@ -46,7 +46,7 @@ ShadowBlocks is an easy VulNyx machine that focuses on storage enumeration, fore
 First, scan the local network to identify active hosts using `arp-scan`.
 
 ```bash
-sudo arp-scan --localnet
+sudo arp-scan --localnet 
 ```
 
 ### Result
