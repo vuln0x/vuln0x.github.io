@@ -20,7 +20,7 @@ draft: false
 
 ---
 
-<img width="851" height="437" alt="image" src="https://github.com/user-attachments/assets/82b4a95f-d603-4e2c-9534-84a6a88f463a" />
+<img width="842" height="438" alt="shadowblocks-vulnyx" src="/images/writeups/vulnyx/shadowblocks.png" />
 
 ShadowBlocks is an easy VulNyx machine that focuses on storage enumeration, forensic recovery, password cracking, credential disclosure, and privilege escalation through an insecure NFS configuration. The machine demonstrates how exposed storage services and infrastructure misconfigurations can lead to full system compromise. 
 
