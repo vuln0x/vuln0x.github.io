@@ -291,7 +291,7 @@ This group has permission to access `/etc/shadow`.
 Search for writable files that may help with privilege escalation:
 
 ```bash
-b.taylor@lower2:~$ find / -type f -writable 2</dev/null | grep -ivE "proc|var|sys|home"
+b.taylor@lower2:~$ find / -type f -writable 2>/dev/null | grep -ivE "proc|var|sys|home"
 /etc/shadow
 ```
 
