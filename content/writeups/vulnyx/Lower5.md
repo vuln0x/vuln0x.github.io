@@ -23,11 +23,8 @@ A VulNyx machine involving Local File Inclusion (LFI), Apache Log Poisoning, Rem
 
 ---
 
-## 🎯 Target Information
+### Key Vulnerabilities
 
-- **Platform:** VulNyx.com 
-- **Machine Name:** Lower5  
-- **Key Vulnerabilities:**
   - Local File Inclusion (LFI)
   - Apache Log Poisoning
   - Remote Code Execution (RCE)

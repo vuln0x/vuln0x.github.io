@@ -23,10 +23,8 @@ A VulNyx machine involving Local File Inclusion (LFI), SSH key extraction, passp
 
 ---
 
-## 🎯 Target Overview
-- Machine Name: Doctor  
-- Platform: VulNyx  
-- Vulnerabilities:
+### Key Vulnerabilities
+
   - Local File Inclusion (LFI)
   - Misconfigured File Permissions
   - Weak SSH Key Protection  

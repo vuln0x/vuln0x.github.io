@@ -20,11 +20,8 @@ draft: false
 
 ---
 
-# 🎯 Target Information
+### Key Vulnerabilities
 
-- **Platform:** VulNyx.com
-- **Machine Name:** BANK
-- **Key Vulnerabilities:**
   - SMB Anonymous Share Access
   - Information Disclosure
   - JWT Information Leakage

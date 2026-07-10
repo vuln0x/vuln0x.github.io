@@ -22,11 +22,8 @@ A VulNyx machine focused on NFS misconfiguration, remote code execution through 
 
 ---
 
-## 🎯 Target Information
+### Key Vulnerabilities
 
-- **Platform:** VulNxy  
-- **Machine Name:** Lower-3  
-- **Key Vulnerabilities:**
   - Misconfigured NFS Share
   - Writable Web Root
   - Remote Code Execution (RCE)

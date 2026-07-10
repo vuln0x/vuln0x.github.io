@@ -23,12 +23,8 @@ A VulNyx machine focused on SMB enumeration, vulnerability identification, and e
 
 ---
 
-## 🎯 Target Information
+### Key Vulnerabilities
 
-- **Platform:** VulNyx.com
-- **Machine Name:** Eternal  
- 
-- **Key Vulnerabilities:**
   - SMBv1 Remote Code Execution
   - MS17-010 (EternalBlue)
   - Outdated Windows 7 System

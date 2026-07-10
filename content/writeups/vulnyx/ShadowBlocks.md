@@ -26,12 +26,8 @@ ShadowBlocks is an easy VulNyx machine that focuses on storage enumeration, fore
 
 ---
 
-## 🎯 Target Information
+### Key Vulnerabilities
 
-- **Platform:** VulNyx.com
-- **Machine Name:** ShadowBlocks
-
-- **Key Vulnerabilities:**
   - Exposed iSCSI Storage
   - Deleted File Recovery
   - Weak 7-Zip Password

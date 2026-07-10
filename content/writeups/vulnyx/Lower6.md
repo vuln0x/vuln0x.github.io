@@ -23,11 +23,8 @@ A VulNyx machine involving Redis enumeration, credential disclosure, SSH access 
 
 ---
 
-## 🎯 Target Information
+### Key Vulnerabilities
 
-- **Platform:** VulNyx  
-- **Machine Name:** Lower6  
-- **Key Vulnerabilities:**
   - Weak Redis Authentication
   - Credential Disclosure
   - SSH Credential Reuse

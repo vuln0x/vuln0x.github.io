@@ -23,12 +23,8 @@ A VulNyx machine involving Telnet enumeration, credential attacks, information d
 
 ---
 
-## 🎯 Target Information
+### Key Vulnerabilities
 
-- **Platform:** VulNxy.com  
-- **Machine Name:** Lower-2  
-  
-- **Key Vulnerabilities:**
   - Weak Telnet Credentials
   - Information Disclosure
   - Writable `/etc/shadow`

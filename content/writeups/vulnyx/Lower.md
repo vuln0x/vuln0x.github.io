@@ -23,12 +23,8 @@ A VulNyx machine focused on virtual host discovery, custom password list generat
 
 ---
 
-## 🎯 Target Information
+### Key Vulnerabilities
 
-- **Platform:** VulnX  
-- **Machine Name:** Lower  
-- **Difficulty:** Beginner/Intermediate  
-- **Key Vulnerabilities:**
   - Virtual Host Enumeration
   - Weak SSH Credentials
   - Writable `/etc/group` Misconfiguration

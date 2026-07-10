@@ -23,12 +23,8 @@ A VulNyx machine focused on user enumeration through the Finger service, SSH acc
 <img width="842" height="438" alt="image" src="/images/writeups/vulnyx/eternal.png" />
 
 ---
+### Key Vulnerabilities
 
-# 🎯 Target Information
-
-- **Platform:** VulNyx
-- **Machine Name:** FING  
-- **Key Vulnerabilities:**
   - Finger Service User Enumeration
   - Weak SSH Credentials
   - Misconfigured `doas` Permissions

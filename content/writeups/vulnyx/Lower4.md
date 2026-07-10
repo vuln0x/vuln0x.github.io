@@ -23,12 +23,8 @@ A VulNyx machine involving username enumeration through the Ident protocol, SSH 
 <img width="842" height="438" alt="image" src="/images/writeups/vulnyx/lower4.png" />
 
 ---
+### Key Vulnerabilities
 
-## 🎯 Target Information
-
-- **Platform:** VulNxy.com 
-- **Machine Name:** Lower4   
-- **Key Vulnerabilities:**
   - Username Enumeration via Ident
   - Weak SSH Credentials
   - Misconfigured Sudo Permissions

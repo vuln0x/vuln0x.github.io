@@ -23,12 +23,8 @@ A VulNyx machine involving FTP credential attacks, arbitrary file upload, remote
 
 ---
 
-## 🎯 Target Information
+### Key Vulnerabilities
 
-- **Platform:** VulNyx.com  
-- **Machine Name:** Lower7  
-- **Difficulty:** Beginner/Intermediate  
-- **Key Vulnerabilities:**
   - Weak FTP Credentials
   - Arbitrary File Upload
   - Remote Code Execution (RCE)
