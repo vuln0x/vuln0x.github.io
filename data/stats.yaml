@@ -2,13 +2,11 @@
 overrides:
   writeups: null
   projects: null
-  certifications: null
   labs: null
   learning_hours: 500
 
 labels:
   writeups: "Writeups Published"
   projects: "Projects Built"
-  certifications: "Certifications Earned"
   labs: "Labs Completed"
   learning_hours: "Learning Hours"

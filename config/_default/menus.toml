@@ -24,11 +24,6 @@
   weight = 50
 
 [[main]]
-  name = 'Certifications'
-  url = '/certifications/'
-  weight = 60
-
-[[main]]
   name = 'About'
   url = '/about/'
   weight = 70
@@ -63,11 +58,6 @@
   name = 'About'
   url = '/about/'
   weight = 60
-
-[[footer]]
-  name = 'Resume'
-  url = '/resume/'
-  weight = 70
 
 [[footer]]
   name = 'Contact'

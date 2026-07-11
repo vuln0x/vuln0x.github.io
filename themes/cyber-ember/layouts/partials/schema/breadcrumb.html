@@ -8,7 +8,7 @@
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "{{ .Site.BaseURL }}"
+      "item": {{ .Site.BaseURL | jsonify }}
     }
     {{- $position := 2 -}}
     {{- range .Ancestors.Reverse -}}
@@ -16,8 +16,8 @@
     ,{
       "@type": "ListItem",
       "position": {{ $position }},
-      "name": "{{ .Title }}",
-      "item": "{{ .Permalink }}"
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
     }
     {{- $position = add $position 1 -}}
     {{- end -}}
@@ -26,8 +26,8 @@
     ,{
       "@type": "ListItem",
       "position": {{ $position }},
-      "name": "{{ .Title }}",
-      "item": "{{ .Permalink }}"
+      "name": {{ .Title | jsonify }},
+      "item": {{ .Permalink | jsonify }}
     }
     {{- end -}}
   ]

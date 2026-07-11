@@ -10,7 +10,6 @@ commands:
         whoami     — Display identity
         skills     — List technical skills
         projects   — Show projects
-        certifications — List certifications
         contact    — Contact information
         clear      — Clear terminal
         help       — Show this message
@@ -54,24 +53,13 @@ commands:
 
   certifications:
     output: |
-      Completed Certifications:
-        ✓ Cisco Introduction to Cybersecurity
-        ✓ Cisco Operating Systems Basics
-        ✓ Postman API Fundamentals Student Expert
-        ✓ Tata Cybersecurity Analyst (Forage)
-        ✓ TryHackMe Pre Security
-        ✓ TryHackMe Security Principles
-        ✓ TryHackMe Pentesting Fundamentals
-        ✓ HTB Academy Linux Fundamentals
-        ✓ HTB Academy Introduction to Networking
-        ✓ HTB Academy Web Requests
+      This command has been removed. Type 'help' for available commands.
 
   contact:
     output: |
       Email:    alakatiritheshchandra04@gmail.com
       GitHub:   https://github.com/zer0arc4
       LinkedIn: https://linkedin.com/in/alakati-rithesh-chandra
-      Resume:   /resume/
 
   clear:
     output: ""
@@ -79,8 +67,8 @@ commands:
 
   ls:
     output: |
-      about/  activity/  blog/  certifications/  contact/  notes/
-      projects/  research/  resume/  writeups/
+      about/  activity/  blog/  contact/  notes/
+      projects/  research/  writeups/
 
   pwd:
     output: "/home/zer0arc4/portfolio"

@@ -19,7 +19,7 @@ draft: false
 
 <img width="842" height="438" alt="image" src="/images/writeups/vulnyx/Network.png" />
 
-Network is an easy VulNyx machine focused on identifying a command injection vulnerability in a custom network information service. By exploiting the vulnerability, it is possible to gain remote code execution and later escalate privileges through a misconfigured sudo rule allowing execution of the `ip` binary as root.
+Network VulNyx is an low machine focused on identifying a command injection vulnerability in a custom network information service. By exploiting the vulnerability, it is possible to gain remote code execution and later escalate privileges through a misconfigured sudo rule allowing execution of the `ip` binary as root.
 
 ### Key Vulnerabilities
 

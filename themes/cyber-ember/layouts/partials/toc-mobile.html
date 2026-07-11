@@ -1,0 +1,20 @@
+{{- if and .TableOfContents (gt (len .TableOfContents) 32) -}}
+
+<details class="toc-mobile xl:hidden mb-8" data-toc-mobile>
+
+  <summary class="toc-mobile-summary cursor-pointer select-none">
+
+    Table of Contents
+
+  </summary>
+
+  <nav class="toc-mobile-nav toc-content pt-4" aria-label="Table of contents">
+
+    {{ .TableOfContents }}
+
+  </nav>
+
+</details>
+
+{{- end -}}
+

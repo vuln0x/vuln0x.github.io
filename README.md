@@ -48,7 +48,6 @@ zer0arc4/zer0arc4.github.io
 
 ## Before Launch Checklist
 
-- [ ] Add resume PDF to `static/files/resume.pdf`
 - [ ] Customize logo at `static/images/logo.svg`
 - [ ] Remove `draft: true` from writeups when ready to publish
 

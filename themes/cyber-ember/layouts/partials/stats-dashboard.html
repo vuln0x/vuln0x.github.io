@@ -6,13 +6,11 @@
   {{- end -}}
 {{- end -}}
 {{- $projectCount := len (where .Site.RegularPages "Section" "projects") -}}
-{{- $certCount := len (where .Site.RegularPages "Section" "certifications") -}}
 {{- $labCount := $writeupCount -}}
 
 {{- $counters := dict
   "writeups" ($stats.overrides.writeups | default $writeupCount)
   "projects" ($stats.overrides.projects | default $projectCount)
-  "certifications" ($stats.overrides.certifications | default $certCount)
   "labs" ($stats.overrides.labs | default $labCount)
   "learning_hours" $stats.overrides.learning_hours
 -}}
@@ -20,10 +18,10 @@
 <section class="py-16 bg-ember-bg-secondary">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="section-title text-center">Statistics Dashboard</h2>
-    <p class="section-subtitle text-center">Tracking progress across labs, projects, and certifications</p>
+    <p class="section-subtitle text-center">Tracking progress across labs, projects, and learning</p>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-      {{ range slice "writeups" "projects" "certifications" "labs" "learning_hours" }}
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      {{ range slice "writeups" "projects" "labs" "learning_hours" }}
       <div class="ember-card p-6 text-center">
         <div class="stat-counter" data-counter data-target="{{ index $counters . }}">0</div>
         <p class="text-text-muted text-sm mt-2">{{ index $stats.labels . }}</p>

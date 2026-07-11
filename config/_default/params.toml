@@ -16,12 +16,6 @@ tagline = 'Documenting my journey through cybersecurity, penetration testing, CT
   linkedin = 'https://linkedin.com/in/alakati-rithesh-chandra'
   email = 'alakatiritheshchandra04@gmail.com'
 
-# Resume
-[resume]
-  file = '/files/resume.pdf'
-  view = true
-  download = true
-
 # Analytics — Plausible (privacy-friendly)
 [analytics]
   enabled = true
@@ -65,7 +59,6 @@ tagline = 'Documenting my journey through cybersecurity, penetration testing, CT
   related_posts = true
   author_box = true
   breadcrumbs = true
-  dark_mode = true
   newsletter = false
 
 # Homepage section order

@@ -1,0 +1,118 @@
+{{- partial "seo-values.html" . -}}
+{{- $siteName := .Site.Params.brand.name | default .Site.Title -}}
+{{- $description := .Scratch.Get "seoDescription" -}}
+{{- $image := .Scratch.Get "seoImage" -}}
+
+{{- if .IsHome -}}
+{{- /* WebSite + Person schemas are rendered separately on the homepage */ -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ $siteName | jsonify }},
+  "description": {{ $description | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": {{ $siteName | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }}
+  }
+}
+</script>
+{{- else if and (eq .Section "about") .IsPage -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $description | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "mainEntity": {
+    "@type": "Person",
+    "name": {{ $siteName | jsonify }},
+    "jobTitle": {{ .Site.Params.brand.title | jsonify }},
+    "url": {{ .Site.BaseURL | jsonify }},
+    "email": {{ site.Data.site.email | jsonify }},
+    "image": {{ (.Site.Params.brand.logo | default "/images/logo.svg") | absURL | jsonify }},
+    "sameAs": [
+      {{ .Site.Params.social.github | jsonify }},
+      {{ .Site.Params.social.linkedin | jsonify }}
+    ]
+  }
+}
+</script>
+{{- else if and (eq .Section "contact") -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $description | jsonify }},
+  "url": {{ .Permalink | jsonify }}
+}
+</script>
+{{- else if and (eq .Section "projects") .IsPage -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $description | jsonify }},
+  "url": {{ .Permalink | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Params.author | jsonify }}
+  },
+  "image": {{ $image | jsonify }},
+  "codeRepository": {{ (.Params.github | default "") | jsonify }},
+  "programmingLanguage": {{ .Params.technologies | default slice | jsonify }}
+}
+</script>
+{{- else if and (eq .Section "blog") .IsPage -}}
+{{ partial "schema/article.html" . }}
+{{- else if and .File (hasPrefix .File.Dir "writeups/") .IsPage -}}
+{{ partial "schema/article.html" . }}
+{{- else if and (eq .Section "notes") .IsPage -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": {{ .Title | jsonify }},
+  "description": {{ $description | jsonify }},
+  "datePublished": {{ .Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "dateModified": {{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "author": {
+    "@type": "Person",
+    "name": {{ .Site.Params.author | jsonify }}
+  },
+  "url": {{ .Permalink | jsonify }},
+  "image": {{ $image | jsonify }},
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | jsonify }}
+  }
+}
+</script>
+{{- else if or .IsSection (eq .Kind "term") -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $description | jsonify }},
+  "url": {{ .Permalink | jsonify }}
+}
+</script>
+{{- else if .IsPage -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": {{ .Title | jsonify }},
+  "description": {{ $description | jsonify }},
+  "url": {{ .Permalink | jsonify }}
+}
+</script>
+{{- end -}}

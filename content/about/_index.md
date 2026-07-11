@@ -18,10 +18,6 @@ Core competencies span **Linux & Windows administration**, **networking** (TCP/I
 
 Specializations include **web security**, **API security**, **privilege escalation**, and **Active Directory** attack paths.
 
-## Certifications
-
-Certifications from Cisco, Postman, TryHackMe, HTB Academy, and Tata (Forage). See the [certifications page](/certifications/) for the full list.
-
 ## Career Goals
 
 Become a professional **penetration tester** and **red team operator**, contributing to the security community through open-source tools, detailed writeups, and security research.

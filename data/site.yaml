@@ -10,11 +10,6 @@ social:
   linkedin: "https://linkedin.com/in/alakati-rithesh-chandra"
   email: "mailto:alakatiritheshchandra04@gmail.com"
 
-resume:
-  file: "/files/resume.pdf"
-  view_url: "/resume/"
-  download_label: "Download Resume"
-
 intro: |
   Cybersecurity student passionate about penetration testing, red teaming, and 
   continuous learning. Documenting the journey through CTF writeups, lab machines, 

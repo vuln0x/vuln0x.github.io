@@ -2,15 +2,15 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
-  "name": "{{ .Site.Params.brand.name }}",
+  "name": {{ (.Site.Params.brand.name | default .Site.Title) | jsonify }},
   "alternateName": "zer0arc4",
-  "jobTitle": "{{ .Site.Params.brand.title }}",
-  "url": "{{ .Site.BaseURL }}",
-  "email": "{{ site.Data.site.email }}",
-  "image": "{{ (.Site.Params.brand.logo | default "/images/logo.svg") | absURL }}",
+  "jobTitle": {{ .Site.Params.brand.title | jsonify }},
+  "url": {{ .Site.BaseURL | jsonify }},
+  "email": {{ site.Data.site.email | jsonify }},
+  "image": {{ (.Site.Params.brand.logo | default "/images/logo.svg") | absURL | jsonify }},
   "sameAs": [
-    "{{ .Site.Params.social.github }}",
-    "{{ .Site.Params.social.linkedin }}"
+    {{ .Site.Params.social.github | jsonify }},
+    {{ .Site.Params.social.linkedin | jsonify }}
   ],
   "knowsAbout": ["Cybersecurity", "Penetration Testing", "Red Teaming", "CTF"]
 }

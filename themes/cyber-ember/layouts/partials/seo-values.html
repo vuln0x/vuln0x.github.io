@@ -1,0 +1,40 @@
+{{- $siteName := .Site.Params.brand.name | default .Site.Title -}}
+
+{{- $pageTitle := "" -}}
+{{- if .IsHome -}}
+  {{- $pageTitle = printf "%s — %s" $siteName (.Site.Params.brand.title | default .Site.Params.tagline) -}}
+{{- else if eq .Kind "term" -}}
+  {{- $pageTitle = printf "%s: %s | %s" (.Data.Singular | title) .Title $siteName -}}
+{{- else if .Title -}}
+  {{- $pageTitle = printf "%s | %s" .Title $siteName -}}
+{{- else -}}
+  {{- $pageTitle = $siteName -}}
+{{- end -}}
+
+{{- $description := "" -}}
+{{- if .Description -}}
+  {{- $description = .Description -}}
+{{- else if .Summary -}}
+  {{- $description = .Summary | plainify -}}
+{{- else if and .IsSection .Content -}}
+  {{- $description = .Content | plainify | truncate 160 -}}
+{{- else if .Params.summary -}}
+  {{- $description = .Params.summary -}}
+{{- else -}}
+  {{- $description = .Site.Params.description -}}
+{{- end -}}
+{{- $description = $description | plainify | truncate 160 -}}
+
+{{- $ogImage := .Params.featured_image | default .Site.Params.seo.og_image | absURL -}}
+
+{{- $ogType := "website" -}}
+{{- if .IsPage -}}
+  {{- if or (eq .Section "blog") (and .File (hasPrefix .File.Dir "writeups/")) -}}
+    {{- $ogType = "article" -}}
+  {{- end -}}
+{{- end -}}
+
+{{- .Scratch.Set "seoTitle" $pageTitle -}}
+{{- .Scratch.Set "seoDescription" $description -}}
+{{- .Scratch.Set "seoImage" $ogImage -}}
+{{- .Scratch.Set "seoType" $ogType -}}

@@ -1,4 +1,4 @@
-{{- /* Builds a sorted slice of activity dicts from writeups, projects, blog, certifications */ -}}
+{{- /* Builds a sorted slice of activity dicts from writeups, projects, and blog */ -}}
 {{- $activities := slice -}}
 
 {{- range .Site.RegularPages -}}
@@ -35,19 +35,6 @@
       "date" .Date
       "url" .RelPermalink
       "type" "blog"
-      "summary" $summary
-    ) -}}
-  {{- end -}}
-{{- end -}}
-
-{{- range where .Site.RegularPages "Section" "certifications" -}}
-  {{- if not .Draft -}}
-    {{- $summary := .Summary | default .Description | plainify | truncate 120 -}}
-    {{- $activities = $activities | append (dict
-      "title" .Title
-      "date" .Date
-      "url" .RelPermalink
-      "type" "certification"
       "summary" $summary
     ) -}}
   {{- end -}}

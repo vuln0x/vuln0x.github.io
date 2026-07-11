@@ -1,9 +1,9 @@
-{{ $theme := resources.Get "js/theme.js" }}
 {{ $nav := resources.Get "js/nav.js" }}
 {{ $stats := resources.Get "js/stats.js" }}
 {{ $search := resources.Get "js/search.js" }}
+{{ $toc := resources.Get "js/toc.js" }}
 
-{{ $js := slice $theme $nav $stats }}
+{{ $js := slice $nav $stats $toc }}
 {{ if .Site.Params.search.enabled }}
   {{ $js = $js | append $search }}
 {{ end }}
