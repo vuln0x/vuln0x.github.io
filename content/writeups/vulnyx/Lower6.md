@@ -1,5 +1,5 @@
 ---
-title: "Lower6 Writeup - Vulnyx"
+title: "Lower6 Vulnyx Writeup "
 date: 2026-05-15
 description: "VulNyx Lower-6 writeup covering Redis credential disclosure, SSH access, and privilege escalation through Linux capabilities."
 summary: "Enumerated a Redis instance, recovered stored credentials, gained SSH access, and abused a misconfigured gdb capability to obtain root privileges."

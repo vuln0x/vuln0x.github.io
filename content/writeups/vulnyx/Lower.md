@@ -1,5 +1,5 @@
 ---
-title: "Lower Writeup - Vulnyx"
+title: "Lower Vulnyx Writeup "
 date: 2026-05-09
 description: "VulNyx Lower writeup covering virtual host enumeration, SSH credential attacks, and privilege escalation through a writable /etc/group file."
 summary: "Discovered a hidden virtual host, generated custom passwords using CeWL, obtained SSH access through weak credentials, and escalated privileges by modifying a writable /etc/group file."

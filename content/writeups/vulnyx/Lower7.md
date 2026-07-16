@@ -1,5 +1,5 @@
 ---
-title: "Lower7 Writeup - Vulnyx"
+title: "Lower7 Vulnyx Writeup"
 date: 2026-05-16
 description: "VulNyx Lower-7 writeup covering FTP credential attacks, arbitrary file upload, Node.js remote code execution, and privilege escalation through shadow group access."
 summary: "Recovered FTP credentials from a leaked username, uploaded a Node.js reverse shell, obtained access as a low-privileged user, and escalated privileges by cracking the root password hash."

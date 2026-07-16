@@ -1,5 +1,5 @@
 ---
-title: "FING Writeup - Vulnyx"
+title: "FING Vulnyx Writeup "
 date: 2026-05-25
 description: "VulNyx FING writeup covering Finger service enumeration, SSH access, and privilege escalation through a misconfigured doas configuration."
 summary: "Enumerated users through the Finger service, obtained SSH access with weak credentials, and escalated privileges via a vulnerable doas rule."

@@ -1,5 +1,5 @@
 ---
-title: "Eternal Writeup - Vulnyx"
+title: "Eternal Vulnyx Writeup"
 date: 2026-05-28
 description: "VulNyx Eternal writeup covering SMBv1 enumeration, MS17-010 detection, EternalBlue exploitation, and SYSTEM-level access."
 summary: "Identified a vulnerable Windows 7 host, confirmed MS17-010, exploited EternalBlue using Metasploit, and obtained NT AUTHORITY\\SYSTEM privileges."

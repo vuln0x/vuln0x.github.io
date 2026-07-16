@@ -1,5 +1,5 @@
 ---
-title: "Lower3 Writeup - Vulnyx"
+title: "Lower3 Vulnyx Writeup "
 date: 2026-05-13
 description: "VulNyx Lower-3 writeup covering NFS share abuse, remote code execution, and privilege escalation through a SUID Bash binary."
 summary: "Mounted an exposed NFS share, uploaded a PHP reverse shell, gained initial access, and escalated privileges through a writable web root and SUID Bash."
