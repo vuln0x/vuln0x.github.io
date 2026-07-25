@@ -1,5 +1,5 @@
 ---
-title: "Method Vulnyx Writeup"
+title: "Method | Vulnyx Writeup"
 date: 2026-07-17T17:18:42+05:30
 description: "VulNyx Method writeup demonstrating WebDAV exploitation, file upload bypass, remote code execution, and privilege escalation through Tar Wildcard (Glob) Argument Injection."
 summary: "Exploited a vulnerable WebDAV configuration to upload a PHP web shell, gained remote code execution, and escalated privileges using Tar Wildcard Argument Injection in a root cron job."

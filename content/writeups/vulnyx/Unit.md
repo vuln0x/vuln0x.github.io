@@ -1,5 +1,5 @@
 ---
-title: "Unit Vulnyx Writeup "
+title: "Unit | Vulnyx Writeup "
 date: 2026-07-09T22:04:27+05:30
 description: "VulNyx Unit writeup covering dangerous HTTP methods, arbitrary file upload, remote code execution, and privilege escalation through misconfigured sudo permissions."
 summary: "Abused HTTP PUT and MOVE methods to upload and execute a PHP web shell, gained initial access as www-data, and escalated privileges to root using GTFOBins and insecure sudo configurations."
