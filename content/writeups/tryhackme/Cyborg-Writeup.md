@@ -1,5 +1,5 @@
 ---
-title: "Cyborg Writeup"
+title: "Cyborg | TryHackMe Writeup"
 date: 2026-06-18
 description: "TryHackMe Cyborg writeup covering archive analysis, credential recovery, and privilege escalation."
 summary: "Enumerated web directories, extracted Borg archives, recovered credentials, and exploited sudo permissions for root access."

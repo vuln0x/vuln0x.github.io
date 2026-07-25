@@ -1,5 +1,5 @@
 ---
-title: "Lian_Yu"
+title: "Lian_Yu | TryHackMe Writeup"
 date: 2026-06-18
 description: "TryHackMe Lian_Yu writeup covering web enumeration, FTP access, steganography, SSH compromise, and privilege escalation."
 summary: "Discovered hidden web directories, recovered FTP credentials, extracted SSH credentials from steganographic content, and escalated privileges using pkexec."

@@ -1,5 +1,5 @@
 ---
-title: "TomGhost"
+title: "TomGhost | TryHackMe Writeup"
 date: 2026-07-23T00:00:43+05:30
 description: "TryHackMe TomGhost writeup covering Ghostcat (CVE-2020-1938), credential disclosure, GPG passphrase cracking, and privilege escalation via GTFOBins."
 summary: "Exploited the Ghostcat vulnerability to read Tomcat configuration files, recovered SSH credentials, cracked a GPG private key passphrase to obtain additional credentials, and escalated privileges to root by abusing sudo access to the zip binary."

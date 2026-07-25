@@ -1,5 +1,5 @@
 ---
-title: "Network Vulnyx Writeup "
+title: "Network | Vulnyx Writeup "
 date: 2026-07-10T15:42:49+05:30
 description: "VulNyx Network writeup covering command injection, remote code execution, and privilege escalation through a misconfigured sudo rule using GTFOBins."
 summary: "Exploited a command injection vulnerability in a custom network utility to obtain a reverse shell, then escalated privileges to root by abusing sudo access to the ip binary."
