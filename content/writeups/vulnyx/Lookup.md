@@ -1,5 +1,5 @@
 ---
-title: "Lookup"
+title: "Lookup | Vulnyx Writeup"
 date: 2026-07-27T21:51:28+05:30
 description: "VulNyx Lookup writeup covering DNS Zone Transfer (AXFR), weak SSH credentials, and privilege escalation via a misconfigured sudo rule allowing nsenter."
 summary: "Compromised the Lookup machine by abusing an unrestricted DNS Zone Transfer to enumerate employee accounts, reused the leaked usernames during SSH credential testing, and escalated privileges by abusing sudo access to the nsenter binary."
