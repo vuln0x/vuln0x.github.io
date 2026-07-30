@@ -29,7 +29,7 @@ Lookup is an easy VulNyx machine that focuses on DNS enumeration and information
 - Privilege Escalation via `nsenter`
 - Misconfigured Sudo Permissions
 
-## Reconnaissance
+## 🔍 Reconnaissance
 
 Begin by performing a full TCP port scan against the target.
 
