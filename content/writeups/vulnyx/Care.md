@@ -17,9 +17,10 @@ draft: false
 
 ## Overview
 
-Care is an easy VulNyx machine that demonstrates how a Local File Inclusion (LFI) vulnerability can be combined with Squid proxy log poisoning to achieve Remote Code Execution. After gaining a shell as the web server user, the attack continues by abusing a misconfigured sudo rule to pivot to another user, recovering a KeePass database, cracking its master password, and finally obtaining the stored root credentials.
 
 <img width="842" height="438" alt="image" src="/images/writeups/vulnyx/Care.png" />
+
+Care is an easy VulNyx machine that demonstrates how a Local File Inclusion (LFI) vulnerability can be combined with Squid proxy log poisoning to achieve Remote Code Execution. After gaining a shell as the web server user, the attack continues by abusing a misconfigured sudo rule to pivot to another user, recovering a KeePass database, cracking its master password, and finally obtaining the stored root credentials.
 
 ### Target Information
 
