@@ -8,7 +8,7 @@ difficulty: "medium"
 os: "Linux"
 status: "active"
 featured: true
-featured_image: "/images/writeups/vulnyx/Volt.png"
+featured_image: "/images/writeups/vulnyx/volt.png"
 tags: ["linux", "nmap", "gobuster", "ffuf", "command-injection", "ssh", "sudo", "privilege-escalation"]
 skills: ["nmap", "gobuster", "ffuf", "burp-suite", "command-injection", "linux", "ssh", "sudo"]
 comments: false
@@ -17,7 +17,7 @@ draft: false
 
 ## Overview
 
-<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/Volt.png" />
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/volt.png" />
 
 Volt is a VulNyx machine involving an access-control bypass, weak administrative credentials, command injection, sensitive credential disclosure, SSH access, and unrestricted sudo privileges.
 
