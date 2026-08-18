@@ -1704,6 +1704,9 @@ video {
 .top-24 {
   top: 6rem;
 }
+.isolate {
+  isolation: isolate;
+}
 .z-40 {
   z-index: 40;
 }

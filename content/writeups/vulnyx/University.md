@@ -7,7 +7,7 @@ platform: "vulnyx"
 difficulty: "medium"
 os: "Linux"
 status: "active"
-featured: false
+featured: true
 featured_image: "/images/writeups/vulnyx/University.png"
 tags: ["linux", "moodle", "cve-2024-43425", "rce", "keepass", "ssh", "git", "sudo", "privilege-escalation"]
 skills: ["nmap", "gobuster", "burpsuite", "moodle", "python", "netcat", "keepass4brute", "ssh"]
