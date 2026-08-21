@@ -1,5 +1,5 @@
 ---
-title: "WellPlayed | Vulnyx Writeup"
+title: "Wellplayed | Vulnyx Writeup"
 date: 2026-08-21T22:29:18+05:30
 description: "VulNyx WellPlayed writeup covering WordPress WP2Shell RCE, sensitive credential disclosure, MariaDB exploitation, privileged Docker access, and SUID Bash privilege escalation."
 summary: "Compromised the WellPlayed machine through unauthenticated WordPress WP2Shell RCE, obtained credentials from a sensitive file, gained SSH access as maciiii, exploited MariaDB 13.0.1 to access a privileged container, and escalated to root through a privileged Docker configuration and SUID Bash."
@@ -8,7 +8,7 @@ difficulty: "easy"
 os: "Linux"
 status: "active"
 featured: true
-featured_image: "/images/writeups/vulnyx/WellPlayed.png"
+featured_image: "/images/writeups/vulnyx/Wellplayed.png"
 tags: ["linux", "wordpress", "wp2shell", "rce", "credentials", "ssh", "mariadb", "docker", "privileged-container", "docker-socket", "suid", "bash", "privilege-escalation"]
 skills: ["nmap", "wpscan", "wp2shell", "python", "netcat", "linux-enumeration", "ssh", "mariadb", "mysql", "docker", "docker-socket", "suid", "bash", "privilege-escalation"]
 comments: false
@@ -17,7 +17,7 @@ draft: false
 
 ## Overview
 
-<img width="842" height="438" alt="wellplayed-vulnyx" src="/images/writeups/vulnyx/WellPlayed.png" />
+<img width="842" height="438" alt="wellplayed-vulnyx" src="/images/writeups/vulnyx/Wellplayed.png" />
 
 WellPlayed is an easy VulNyx machine that focuses on WordPress exploitation, unauthenticated remote code execution, sensitive credential disclosure, database exploitation, privileged Docker containers, and SUID Bash privilege escalation. The machine demonstrates how weaknesses across web applications, database services, and container configurations can be chained together to achieve full system compromise.
 
