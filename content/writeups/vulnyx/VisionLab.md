@@ -4,7 +4,7 @@ date: 2026-08-19T00:08:21+05:30
 description: "VulNyx VisionLab writeup covering insecure PyTorch model uploads, PyTorch deserialization RCE, reverse shell access, SSH key persistence, and privilege escalation through misconfigured dmidecode sudo permissions."
 summary: "Compromised the VisionLab machine by abusing an insecure PyTorch model upload, executing a malicious serialized payload through torch.load(), obtaining a reverse shell as vision, establishing SSH access, and escalating privileges through a vulnerable dmidecode configuration."
 platform: "vulnyx"
-difficulty: "easy"
+difficulty: "medium"
 os: "Linux"
 status: "active"
 featured: true

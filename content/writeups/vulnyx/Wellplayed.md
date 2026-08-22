@@ -4,7 +4,7 @@ date: 2026-08-21T22:29:18+05:30
 description: "VulNyx WellPlayed writeup covering WordPress WP2Shell RCE, sensitive credential disclosure, MariaDB exploitation, privileged Docker access, and SUID Bash privilege escalation."
 summary: "Compromised the WellPlayed machine through unauthenticated WordPress WP2Shell RCE, obtained credentials from a sensitive file, gained SSH access as maciiii, exploited MariaDB 13.0.1 to access a privileged container, and escalated to root through a privileged Docker configuration and SUID Bash."
 platform: "vulnyx"
-difficulty: "easy"
+difficulty: "medium"
 os: "Linux"
 status: "active"
 featured: true
