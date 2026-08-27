@@ -143,7 +143,8 @@ gobuster dir -u http://bank.nyx -w /usr/share/wordlists/dirbuster/directory-list
 
 ### Result
 
-```text$ gobuster dir -u http://bank.nyx -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
+```text
+$ gobuster dir -u http://bank.nyx -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt 
 ===============================================================
 Gobuster v3.8.2
 by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)

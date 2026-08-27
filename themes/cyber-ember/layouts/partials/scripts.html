@@ -2,8 +2,9 @@
 {{ $stats := resources.Get "js/stats.js" }}
 {{ $search := resources.Get "js/search.js" }}
 {{ $toc := resources.Get "js/toc.js" }}
+{{ $copy := resources.Get "js/copy.js" }}
 
-{{ $js := slice $nav $stats $toc }}
+{{ $js := slice $nav $stats $toc $copy }}
 {{ if .Site.Params.search.enabled }}
   {{ $js = $js | append $search }}
 {{ end }}

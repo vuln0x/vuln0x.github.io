@@ -1,15 +1,21 @@
 {{ define "main" }}
+{{- $root := .Site.GetPage "writeups" | default . -}}
+{{- $platforms := slice -}}
+{{- range $root.Sections -}}
+  {{- $count := len .RegularPagesRecursive -}}
+  {{- $platforms = $platforms | append (dict "page" . "count" $count "n" (mul $count -1)) -}}
+{{- end -}}
+{{- $platforms = sort $platforms "n" -}}
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
   {{ partial "section-header.html" . }}
 
-  <!-- Platform Filter -->
   <div class="flex flex-wrap gap-3 mb-10">
-    <a href="{{ "/writeups/" | relURL }}" class="badge badge-platform px-4 py-2 {{ if eq .Section "writeups" }}bg-ember-primary/30{{ end }}">All</a>
-    {{ range .Sections }}
-    <a href="{{ .RelPermalink }}" class="badge badge-platform px-4 py-2 hover:bg-ember-primary/20 transition-colors">
-      {{ .Title }} ({{ len .RegularPages }})
+    <a href="{{ $root.RelPermalink }}" class="badge badge-platform px-4 py-2{{ if eq .RelPermalink $root.RelPermalink }} bg-ember-primary/30{{ end }}">All</a>
+    {{- range $platforms -}}
+    <a href="{{ .page.RelPermalink }}" class="badge badge-platform px-4 py-2 hover:bg-ember-primary/20 transition-colors{{ if eq $.RelPermalink .page.RelPermalink }} bg-ember-primary/30{{ end }}">
+      {{ .page.Title }} ({{ .count }})
     </a>
-    {{ end }}
+    {{- end -}}
   </div>
 
   {{ if .IsSection }}
@@ -19,14 +25,17 @@
         {{ partial "writeup-card.html" . }}
       {{ end }}
     </div>
-    {{ else if gt (len .Sections) 0 }}
+    {{ else if eq .RelPermalink $root.RelPermalink }}
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {{ range .Sections }}
-      <a href="{{ .RelPermalink }}" class="ember-card p-6 text-center group">
-        <h3 class="text-text-primary font-semibold text-lg group-hover:text-ember-primary transition-colors">{{ .Title }}</h3>
-        <p class="text-text-muted text-sm mt-2">{{ len .RegularPages }} writeups</p>
-      </a>
-      {{ end }}
+      {{- range $platforms -}}
+      <article class="ember-card p-6 text-center group relative">
+        
+        <a href="{{ .page.RelPermalink }}" class="block">
+          <h3 class="text-text-primary font-semibold text-lg group-hover:text-ember-primary transition-colors">{{ .page.Title }}</h3>
+          <p class="text-text-muted text-sm mt-2">{{ .count }} writeups</p>
+        </a>
+      </article>
+      {{- end -}}
     </div>
     {{ else }}
     <p class="text-text-muted">No writeups published yet.</p>

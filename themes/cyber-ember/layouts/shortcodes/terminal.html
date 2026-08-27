@@ -5,5 +5,5 @@
     <span class="terminal-dot bg-green-500"></span>
     <span class="ml-2 text-text-muted text-xs">terminal</span>
   </div>
-  <div class="terminal-body font-mono text-sm text-text-secondary whitespace-pre-wrap">{{ .Inner }}</div>
+  <pre class="terminal-body font-mono text-sm text-text-secondary whitespace-pre-wrap m-0"><code>{{ .Inner | htmlEscape | strings.TrimSpace }}</code></pre>
 </div>

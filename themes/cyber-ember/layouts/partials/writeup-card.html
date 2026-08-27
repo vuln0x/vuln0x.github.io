@@ -1,34 +1,28 @@
 {{- $page := . -}}
-<a href="{{ $page.RelPermalink }}" class="ember-card block overflow-hidden group" data-pagefind-body>
-  {{ with $page.Params.featured_image }}
-  <div class="aspect-video overflow-hidden bg-ember-bg-secondary">
-    <img src="{{ . }}" alt="{{ $page.Title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="225">
-  </div>
-  {{ end }}
-  <div class="p-5">
-    <div class="flex flex-wrap items-center gap-2 mb-3">
-      {{ with $page.Params.platform }}
-      <span class="badge badge-platform">{{ . }}</span>
-      {{ end }}
-      {{ with $page.Params.difficulty }}
-      <span class="badge badge-{{ . }}">{{ . }}</span>
-      {{ end }}
-      {{ with $page.Params.os }}
-      <span class="badge bg-ember-bg-secondary text-text-muted">{{ . }}</span>
-      {{ end }}
-    </div>
-    <h3 class="text-text-primary font-semibold group-hover:text-ember-primary transition-colors mb-2">{{ $page.Title }}</h3>
-    <p class="text-text-muted text-sm line-clamp-2 mb-3">{{ $page.Summary | default $page.Description | plainify | truncate 120 }}</p>
-    <div class="flex items-center justify-between text-xs text-text-muted">
-      <time datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
-      <span>{{ $page.ReadingTime }} min read</span>
-    </div>
-    {{ with $page.Params.tags }}
-    <div class="flex flex-wrap gap-1.5 mt-3">
-      {{ range first 3 . }}
-      <span class="badge bg-ember-bg-secondary text-text-muted text-xs">#{{ . }}</span>
-      {{ end }}
+<article class="ember-card overflow-hidden group relative">
+    <a href="{{ $page.RelPermalink }}" class="block">
+    {{ with $page.Params.featured_image }}
+    <div class="aspect-video overflow-hidden bg-ember-bg-secondary">
+      <img src="{{ . }}" alt="{{ $page.Title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" width="400" height="225">
     </div>
     {{ end }}
-  </div>
-</a>
+    <div class="p-5">
+      <div class="flex flex-wrap items-center gap-2 mb-3"> 
+        {{ with $page.Params.platform }}<span class="badge badge-platform">{{ . }}</span>{{ end }}
+        {{ with $page.Params.difficulty }}<span class="badge badge-{{ . }}">{{ . }}</span>{{ end }}
+        {{ with $page.Params.os }}<span class="badge bg-ember-bg-secondary text-text-muted">{{ . }}</span>{{ end }}
+      </div>
+      <h3 class="text-text-primary font-semibold group-hover:text-ember-primary transition-colors mb-2">{{ $page.Title }}</h3>
+      <p class="text-text-muted text-sm line-clamp-2 mb-3">{{ $page.Summary | default $page.Description | plainify | truncate 120 }}</p>
+      <div class="flex items-center justify-between text-xs text-text-muted">
+        <time datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
+        <span>{{ $page.ReadingTime }} min read</span>
+      </div>
+      {{ with $page.Params.tags }}
+      <div class="flex flex-wrap gap-1.5 mt-3">
+        {{ range first 3 . }}<span class="badge bg-ember-bg-secondary text-text-muted text-xs">#{{ . }}</span>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </a>
+</article>

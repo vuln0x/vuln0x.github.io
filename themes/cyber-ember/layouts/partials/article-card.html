@@ -1,21 +1,17 @@
 {{- $page := . -}}
-<a href="{{ $page.RelPermalink }}" class="ember-card block p-5 group" data-pagefind-body>
-  <div class="flex flex-wrap items-center gap-2 mb-3">
-    {{ with $page.Params.categories }}
-    <span class="badge badge-platform">{{ index . 0 }}</span>
-    {{ end }}
-    <time class="text-text-muted text-xs font-mono" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
-  </div>
-  <h3 class="text-text-primary font-semibold group-hover:text-ember-primary transition-colors mb-2">{{ $page.Title }}</h3>
-  <p class="text-text-muted text-sm line-clamp-2 mb-3">{{ $page.Summary | default $page.Description | plainify | truncate 120 }}</p>
-  <div class="flex items-center justify-between text-xs text-text-muted">
-    <span>{{ $page.ReadingTime }} min read</span>
-    {{ with $page.Params.tags }}
-    <div class="flex gap-1">
-      {{ range first 2 . }}
-      <span>#{{ . }}</span>
+<article class="ember-card p-5 group relative">
+  <a href="{{ $page.RelPermalink }}" class="block pr-8">
+    <div class="flex flex-wrap items-center gap-2 mb-3">
+      {{ with $page.Params.categories }}<span class="badge badge-platform">{{ index . 0 }}</span>{{ end }}
+      <time class="text-text-muted text-xs font-mono" datetime="{{ $page.Date.Format "2006-01-02" }}">{{ $page.Date.Format "Jan 2, 2006" }}</time>
+    </div>
+    <h3 class="text-text-primary font-semibold group-hover:text-ember-primary transition-colors mb-2">{{ $page.Title }}</h3>
+    <p class="text-text-muted text-sm line-clamp-2 mb-3">{{ $page.Summary | default $page.Description | plainify | truncate 120 }}</p>
+    <div class="flex items-center justify-between text-xs text-text-muted">
+      <span>{{ $page.ReadingTime }} min read</span>
+      {{ with $page.Params.tags }}
+      <div class="flex gap-1">{{ range first 2 . }}<span>#{{ . }}</span>{{ end }}</div>
       {{ end }}
     </div>
-    {{ end }}
-  </div>
-</a>
+  </a>
+</article>
