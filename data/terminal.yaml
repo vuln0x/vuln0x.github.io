@@ -9,8 +9,6 @@ commands:
       Available commands:
         whoami     — Display identity
         skills     — List technical skills
-        projects   — Show projects
-        contact    — Contact information
         clear      — Clear terminal
         help       — Show this message
 
