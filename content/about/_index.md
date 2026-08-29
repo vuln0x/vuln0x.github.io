@@ -1,11 +1,11 @@
 ---
 title: "About"
-description: "Learn about zer0arc4 — cybersecurity student, penetration tester, and aspiring red teamer."
+description: "Learn about vuln0x — cybersecurity student, penetration tester, and aspiring red teamer."
 ---
 
 ## Biography
 
-**zer0arc4** is a cybersecurity student with a passion for penetration testing, red teaming, and continuous learning. This site documents the journey through CTF writeups, lab machines, security research, and tool development — building practical skills across offensive security, networking, and application security.
+**vuln0x** is a cybersecurity student with a passion for penetration testing, red teaming, and continuous learning. This site documents the journey through CTF writeups, lab machines, security research, and tool development — building practical skills across offensive security, networking, and application security.
 
 ## Education
 
@@ -27,9 +27,9 @@ Become a professional **penetration tester** and **red team operator**, contribu
 | Category | Tools |
 |----------|-------|
 | Reconnaissance | Nmap, Wireshark, OSINT frameworks |
-| Web Testing | Burp Suite, Caido, Postman |
-| Exploitation | Metasploit, custom Python/Bash scripts |
-| Environment | VirtualBox, Linux, Windows |
+| Web Testing | Burp Suite, Caido |
+| Exploitation |
+| VirtualBox, Linux, Windows |
 | Development | Python, Git, GitHub |
 
 ## Interests
