@@ -49,18 +49,6 @@ tagline = 'Documenting my journey through cybersecurity, penetration testing, CT
   og_image = '/images/og/default.svg'
   google_site_verification = 'mfVDDGTzy77apV5OY-Qfb-7nYn0cilbezliN7ppYHOA'
 
-# Features
-[features]
-  terminal = false
-  stats = true
-  skills_matrix = false
-  timeline = true
-  reading_time = true
-  related_posts = true
-  author_box = true
-  breadcrumbs = true
-  newsletter = false
-
 # Homepage section order
 [homepage]
   sections = [
@@ -70,7 +58,6 @@ tagline = 'Documenting my journey through cybersecurity, penetration testing, CT
     'latest_articles',
     'stats',
     'activity_timeline',
-    'contact_cta',
   ]
 
 # Difficulty colors
