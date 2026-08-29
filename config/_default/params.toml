@@ -1,32 +1,31 @@
-# zer0arc4 Theme Parameters
+# vuln0x Theme Parameters
 
 description = 'Documenting my journey through cybersecurity, penetration testing, CTFs, research, and tool development.'
-author = 'zer0arc4'
+author = 'vuln0x'
 tagline = 'Documenting my journey through cybersecurity, penetration testing, CTFs, research, and tool development.'
 
 # Branding
 [brand]
-  name = 'zer0arc4'
+  name = 'vuln0x'
   title = 'Cybersecurity Student | Penetration Testing & Red Teaming Enthusiast'
   logo = '/images/logo.svg'
 
 # Social
 [social]
-  github = 'https://github.com/zer0arc4'
-  linkedin = 'https://linkedin.com/in/alakati-rithesh-chandra'
-  email = 'iamzer0arc4@gmail.com'
+  github = 'https://github.com/vuln0x'
+  email = '@gmail.com'
 
 # Analytics — Plausible (privacy-friendly)
 [analytics]
   enabled = true
   provider = 'plausible'
-  domain = 'zer0arc4.github.io'
+  domain = 'vuln0x.github.io'
 
 # Comments — Giscus
 [comments]
   enabled = true
   provider = 'giscus'
-  repo = 'zer0arc4/zer0arc4.github.io'
+  repo = 'vuln0x/vuln0x.github.io'
   repoId = 'R_kgDOS0PC0Q'
   category = 'Comments'
   categoryId = 'DIC_kwDOS0PC0c4C-vfD'
