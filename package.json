@@ -1,7 +1,7 @@
 {
-  "name": "zer0arc4-portfolio",
+  "name": "vuln0x-portfolio",
   "version": "1.0.0",
-  "description": "zer0arc4 — Cybersecurity Portfolio",
+  "description": "vuln0x — Cybersecurity Portfolio",
   "private": true,
   "engines": {
     "node": ">=20 <=22"
