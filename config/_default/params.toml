@@ -8,7 +8,7 @@ tagline = 'Documenting my journey through cybersecurity, penetration testing, CT
 [brand]
   name = 'vuln0x'
   title = 'Cybersecurity Student | Penetration Testing & Red Teaming Enthusiast'
-  logo = '/images/logo.svg'
+  logo = '/images/logo.jpg'
 
 # Social
 [social]
