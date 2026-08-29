@@ -1,14 +1,12 @@
-name: "zer0arc4"
+name: "vuln0x"
 title: "Cybersecurity Student | Penetration Tester | Aspiring Red Teamer"
-tagline: "Documenting my journey through cybersecurity, penetration testing, CTFs, research, and tool development."
-email: "alakatiritheshchandra04@gmail.com"
-location: "India"
+tagline: "Documenting my journey through cybersecurity, penetration testing, research, and tool development."
+email: "@gmail.com"
+location: "Uzbekistan"
 logo: "/images/logo.svg"
 
 social:
-  github: "https://github.com/zer0arc4"
-  linkedin: "https://linkedin.com/in/alakati-rithesh-chandra"
-  email: "mailto:alakatiritheshchandra04@gmail.com"
+  github: "https://github.com/vuln0x"
 
 intro: |
   Cybersecurity student passionate about penetration testing, red teaming, and 
