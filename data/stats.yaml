@@ -1,12 +1,10 @@
 # Manual overrides — auto-counted values used when not specified
 overrides:
   writeups: null
-  projects: null
   labs: null
   learning_hours: 500
 
 labels:
   writeups: "Writeups Published"
-  projects: "Projects Built"
   labs: "Labs Completed"
   learning_hours: "Learning Hours"
