@@ -58,4 +58,3 @@ enableEmoji = true
 
 [permalinks]
   writeups = '/writeups/:sections[1:]/:slug/'
-  notes = '/notes/:sections[1:]/:slug/'
