@@ -9,16 +9,6 @@
   weight = 20
 
 [[main]]
-  name = 'Projects'
-  url = '/projects/'
-  weight = 30
-
-[[main]]
-  name = 'Notes'
-  url = '/notes/'
-  weight = 40
-
-[[main]]
   name = 'Activity'
   url = '/activity/'
   weight = 50
@@ -28,25 +18,10 @@
   url = '/about/'
   weight = 70
 
-[[main]]
-  name = 'Contact'
-  url = '/contact/'
-  weight = 80
-
 [[footer]]
   name = 'Writeups'
   url = '/writeups/'
   weight = 10
-
-[[footer]]
-  name = 'Projects'
-  url = '/projects/'
-  weight = 20
-
-[[footer]]
-  name = 'Notes'
-  url = '/notes/'
-  weight = 30
 
 [[footer]]
   name = 'Activity'
@@ -58,8 +33,3 @@
   name = 'About'
   url = '/about/'
   weight = 60
-
-[[footer]]
-  name = 'Contact'
-  url = '/contact/'
-  weight = 80
