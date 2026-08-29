@@ -1,6 +1,6 @@
-prompt: "zer0arc4@portfolio:~$"
+prompt: "vuln0x@portfolio:~$"
 banner: |
-  zer0arc4 Terminal v1.0
+  vuln0x Terminal v1.0
   Type 'help' for available commands.
 
 commands:
@@ -38,26 +38,9 @@ commands:
       [Domains]
         Web Security ███████░░░ 72%   API Security ███████░░░ 70%
 
-  projects:
-    output: |
-      [1] Cryptographic Hash Generator
-          → /projects/cryptographic-hash-generator/
-
-      [2] Student Database System
-          → /projects/student-database-system/
-
-      [3] Future Security Tools
-          → /projects/future-security-tools/
-
   certifications:
     output: |
       This command has been removed. Type 'help' for available commands.
-
-  contact:
-    output: |
-      Email:    alakatiritheshchandra04@gmail.com
-      GitHub:   https://github.com/zer0arc4
-      LinkedIn: https://linkedin.com/in/alakati-rithesh-chandra
 
   clear:
     output: ""
@@ -65,7 +48,7 @@ commands:
 
   ls:
     output: |
-      about/  activity/  blog/  contact/  notes/
+      about/  activity/  blog/ 
       projects/  research/  writeups/
 
   pwd:
