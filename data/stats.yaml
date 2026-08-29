@@ -2,7 +2,7 @@
 overrides:
   writeups: null
   labs: null
-  learning_hours: 500
+  learning_hours: 200
 
 labels:
   writeups: "Writeups Published"
