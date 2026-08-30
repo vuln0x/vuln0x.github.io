@@ -1,35 +1,110 @@
 ---
-title: "{{ replace .File.ContentBaseName "-" " " | title }}"
+title: "MASHINA_NOMI | Vulnyx Writeup"
+slug: "mashina-nomi"
 date: {{ .Date }}
-description: ""
-summary: ""
-platform: "{{ .Section }}"
+description: "Short one-line technical summary of the writeup."
+summary: "One or two sentence summary of what was exploited."
+platform: "vulnyx"
 difficulty: "easy"
 os: "Linux"
-points: 0
 status: "active"
 featured: false
-featured_image: "/images/writeups/placeholder.svg"
-tags: []
-skills: []
+featured_image: "/images/writeups/vulnyx/mashina-nomi/mashina-nomi.png"
+tags: ["tag1", "tag2", "vulnyx", "mashina-nomi"]
+skills: ["nmap", "tool2", "tool3"]
 comments: false
-draft: true
+draft: false
 ---
 
-## Overview
+<img width="842" height="438" alt="image" src="/images/writeups/vulnyx/mashina-nomi/mashina-nomi.png" />
 
-Brief description of the machine/challenge.
+---
 
-## Reconnaissance
+### Key Vulnerabilities
+
+- Vulnerability 1
+- Vulnerability 2
+
+---
+
+# 🔍 Network Discovery
 
 ```bash
-# Add recon commands
+sudo arp-scan --localnet
 ```
 
-## Enumeration
+## Result
 
-## Exploitation
+```text
+(natija shu yerga)
+```
 
-## Privilege Escalation
+---
 
-## Lessons Learned
+# 🔎 Enumeration
+
+## Nmap Scan
+
+```bash
+nmap -n -Pn -sS -p- --min-rate 5000 <IP>
+```
+
+## Scan Results
+
+```text
+(natija shu yerga)
+```
+
+### Findings
+
+- Port ... → xizmat
+
+---
+
+## 🌐 Web Enumeration
+
+(agar bo'lsa)
+
+## 📂 Directory Enumeration
+
+(agar bo'lsa)
+
+---
+
+# 🚀 Exploitation
+
+Tafsilotlar, buyruqlar, screenshot'lar bilan.
+
+---
+
+# 🔧 Privilege Escalation
+
+Tafsilotlar.
+
+---
+
+## 📄 User Flag
+
+```bash
+cat /home/user/user.txt
+```
+
+## 🏁 Root Flag
+
+```bash
+cat /root/root.txt
+```
+
+---
+
+# 🧾 Summary
+
+| Phase | Technique |
+|---------|------------|
+| ... | ... |
+
+---
+
+# 🚀 Key Takeaways
+
+- Nima o'rgandingiz
