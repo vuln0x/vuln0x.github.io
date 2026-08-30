@@ -27,8 +27,7 @@ Become a professional **penetration tester** and **red team operator**, contribu
 |----------|-------|
 | Reconnaissance | Nmap, Wireshark, OSINT frameworks |
 | Web Testing | Burp Suite |
-| Exploitation |
-| VirtualBox, Linux, Windows |
+| Exploitation | VirtualBox, Linux, Windows |
 | Development | Python, Git, GitHub |
 
 ## Interests
