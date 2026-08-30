@@ -9,14 +9,13 @@ description: "Learn about vuln0x — cybersecurity student, penetration tester, 
 
 ## Education
 
-- **Bachelor's in Cybersecurity** — In Progress
 - Self-directed learning through HTB Academy, TryHackMe, and hands-on lab environments
 
 ## Technical Skills
 
-Core competencies span **Linux & Windows administration**, **networking** (TCP/IP, OSI model, subnetting), **programming** (Python, Java, C, Bash), and **security tooling** (Nmap, Wireshark, Burp Suite, Caido, Metasploit, Postman).
+Core competencies span **Linux & Windows administration**, **networking** (TCP/IP, OSI model, subnetting) and **security tooling** (Nmap, Wireshark, Burp Suite, Metasploit).
 
-Specializations include **web security**, **API security**, **privilege escalation**, and **Active Directory** attack paths.
+Specializations include **web security**, **privilege escalation**, and **Active Directory** attack paths.
 
 ## Career Goals
 
@@ -27,7 +26,7 @@ Become a professional **penetration tester** and **red team operator**, contribu
 | Category | Tools |
 |----------|-------|
 | Reconnaissance | Nmap, Wireshark, OSINT frameworks |
-| Web Testing | Burp Suite, Caido |
+| Web Testing | Burp Suite |
 | Exploitation |
 | VirtualBox, Linux, Windows |
 | Development | Python, Git, GitHub |
@@ -35,8 +34,6 @@ Become a professional **penetration tester** and **red team operator**, contribu
 ## Interests
 
 - Penetration testing & red teaming
-- CTF competitions
 - Security tool development
-- API security research
 - Active Directory attacks
 - Open-source contributions
